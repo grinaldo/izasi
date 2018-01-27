@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use App\Model\Extension\OrderableTrait;
 use App\Model\Extension\PublishableTrait;
 
-class Banner extends BaseModel
+class Milestone extends BaseModel
 {
     use OrderableTrait, PublishableTrait;
 
-    protected $table = 'banners';
+    protected $table = 'milestones';
 
     protected $urlKey = 'id';
 
@@ -20,11 +20,10 @@ class Banner extends BaseModel
      * @var array
      */
     protected $fillable = [
-        'order',
         'image',
+        'year',
         'name', 
         'description',
-        'order',
         'published'
     ];
     

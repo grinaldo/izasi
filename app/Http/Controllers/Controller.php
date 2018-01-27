@@ -20,14 +20,14 @@ class Controller extends BaseController
         $this->cacheShort  = env('CACHE_BUFFER_SHORT', 1);
         $this->cacheMedium = env('CACHE_BUFFER_MEDIUM', 15);
         $this->cacheLong   = env('CACHE_BUFFER_LONG', 60);
-        $allCategories     = \Cache::remember('nav-all-categories', $this->cacheMedium, function () {
-            return \App\Model\Category::asc()->published()->get();
-        });
+        // $allCategories     = \Cache::remember('nav-all-categories', $this->cacheMedium, function () {
+        //     return \App\Model\Category::asc()->published()->get();
+        // });
 
-        \View::share([
-            'allCategories' => $allCategories,
-            'baseRoute'     => $this->getControllerName() 
-        ]);
+        // \View::share([
+        //     'allCategories' => $allCategories,
+        //     'baseRoute'     => $this->getControllerName() 
+        // ]);
     }
 
     /**

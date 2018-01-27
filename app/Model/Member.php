@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use App\Model\Extension\OrderableTrait;
 use App\Model\Extension\PublishableTrait;
 
-class Banner extends BaseModel
+class Member extends BaseModel
 {
     use OrderableTrait, PublishableTrait;
 
-    protected $table = 'banners';
+    protected $table = 'members';
 
     protected $urlKey = 'id';
 
@@ -23,8 +23,8 @@ class Banner extends BaseModel
         'order',
         'image',
         'name', 
+        'title',
         'description',
-        'order',
         'published'
     ];
     

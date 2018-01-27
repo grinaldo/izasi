@@ -7,6 +7,8 @@ use App\Model\Page;
 
 class StaticController extends Controller
 {
+    
+    
     public function aboutIndex()
     {
         $about = \Cache::remember('abouts', $this->cacheLong, function () {
