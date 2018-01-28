@@ -9,7 +9,11 @@
     <div class="animate form login_form">
         <section class="login_content">
             <form role="form" method="POST" action="{{ route('backend.login') }}">
-                <h1>Login Form</h1>
+                <div class="">
+                    <img src="{{asset('images/logo.png')}}" width="100" alt="">
+                </div>
+                <br>
+                <h1>Admin Login</h1>
                 {{ csrf_field() }}
                 <div class="{{ $errors->has('email') ? ' has-error' : '' }}">
                     {!! Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'email' , 'required']) !!}
@@ -27,8 +31,8 @@
 
                 <div class="separator">
                     <div>
-                        <h1><i class="fa fa-female"></i> Clouwny Admin</h1>
-                        <p>©2017 All Rights Reserved. CMS for Clouwny Website</p>
+                        <h1><i class="fa fa-user"></i> Izasi Admin</h1>
+                        <p>©2017 All Rights Reserved. CMS for Izasi Website</p>
                     </div>
                 </div>
             </form>

@@ -10,7 +10,6 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Wallet</th>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Active</th>
@@ -32,7 +31,6 @@ $(function() {
         columns: [
             { data: 'id', name: 'id' },
             { data: 'name', name: 'name' },
-            { data: 'wallet', name: 'wallet' },
             { data: 'username', name: 'username' },
             { data: 'email', name: 'email' },
             { data: 'active', name: 'active' },

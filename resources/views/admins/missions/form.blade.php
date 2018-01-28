@@ -22,10 +22,14 @@
             ]
         ) 
     !!}
-    {!! Form::backendText('bank_name', 'Bank') !!}
-    {!! Form::backendText('account_name', 'Account Name') !!}
-    {!! Form::backendText('account_number', 'Account Number') !!}
-    {!! Form::backendTextarea('description', 'Description') !!}
+    {{-- {!! Form::backendText('url_prefix', 'URL') !!} --}}
+    {{-- {!! Form::backendText('layout', 'Layout') !!} --}}
+    {!! Form::backendNumber('order', 'Order') !!}
+    {!! Form::backendFileBrowser('image', "Select Image")!!}
+    {!! Form::backendText('name', 'Name') !!}
+    {!! Form::backendWysiwyg('description', 'Description') !!}
+
+    {!! Form::backendSelect('published', 'Published', ['No', 'Yes']) !!}
     
     <div class="form-actions">
         <div class="row">

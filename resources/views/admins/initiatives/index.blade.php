@@ -1,16 +1,16 @@
 @extends('admins._layouts.table')
 
 @section('page-title')
-<h3>FAQ Data</h3>
+<h3>Banners Data</h3>
 @endsection
 
 @section('content')
-    <table class="table table-bordered" id="faqs-table">
+    <table class="table table-bordered" id="banners-table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Order</th>
                 <th>Name</th>
+                <th>Description</th>
                 <th>Published At</th>
                 <th>Created At</th>
                 <th>Updated At</th>
@@ -23,14 +23,14 @@
 @section('page-script')
 <script>
 $(function() {
-    $('#faqs-table').DataTable({
+    $('#banners-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{!! route('backend.faqs.data') !!}',
+        ajax: '{!! route('backend.initiatives.data') !!}',
         columns: [
             { data: 'id', name: 'id' },
-            { data: 'order', name: 'order' },
             { data: 'name', name: 'name' },
+            { data: 'description', name: 'description' },
             { data: 'published_at', name: 'published_at' },
             { data: 'created_at', name: 'created_at' },
             { data: 'updated_at', name: 'updated_at' },

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\Bank as Model;
+use App\Model\Milestone as Model;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Yajra\Datatables\Datatables;
 
-class BankController extends ResourceController
+class MilestoneController extends ResourceController
 {
 
     /**
@@ -16,10 +16,11 @@ class BankController extends ResourceController
      * @var array
      */
     protected $rules = [
-        'bank_name'      => 'required|string',
-        'account_name'   => 'required|string',
-        'account_number' => 'required|string|unique:banks',
-        'description'    => 'sometimes|nullable|string',
+        'image' => '',
+        'year' => 'required|string',
+        'name' => 'required|string',
+        'description' => '',
+        'published' => '',
     ];
 
     public function __construct(Model $model)

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\Faq as Model;
+use App\Model\Vision as Model;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Yajra\Datatables\Datatables;
 
-class FaqController extends ResourceController
+class VisionController extends ResourceController
 {
 
     /**
@@ -16,12 +16,11 @@ class FaqController extends ResourceController
      * @var array
      */
     protected $rules = [
-        'order' => 'integer',
+        'order' => 'sometimes|integer',
+        'image' => '',
         'name' => 'required|string',
-        'image' => 'sometimes|nullable|string',
-        'question' => 'required|string',
-        'answer' => 'required|string',
-        'published' => ''
+        'description' => '',
+        'published' => '',
     ];
 
     public function __construct(Model $model)

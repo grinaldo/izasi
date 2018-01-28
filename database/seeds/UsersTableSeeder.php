@@ -29,12 +29,5 @@ class UsersTableSeeder extends Seeder
             'password' => \Hash::make('password'),
         ]);
         $model->save();
-
-        $faker = Faker\Factory::create();
-        $limit = 100;
-        for ($i = 0; $i < $limit; $i++) {
-            $user = factory(Model::class)->create();
-            $user->save();
-        }
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Model\Member as Model;
+use App\Model\Initiative as Model;
 
 use Carbon\Carbon;
 

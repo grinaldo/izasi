@@ -50,6 +50,12 @@ Route::group(['as' => 'backend.'], function() {
         'uses' => 'CompanyController@anyData'
     ]);
     Route::resource('companies', 'CompanyController');
+    // Articles
+    Route::get('articles/anydata', [
+        'as' => 'articles.data',
+        'uses' => 'ArticleController@anyData'
+    ]);
+    Route::resource('articles', 'ArticleController');
     // Vision
     Route::get('visions/anydata', [
         'as' => 'visions.data',
@@ -61,7 +67,7 @@ Route::group(['as' => 'backend.'], function() {
         'as' => 'initiatives.data',
         'uses' => 'InitiativeController@anyData'
     ]);
-    Route::resource('initiatives', ' InitiativeController');
+    Route::resource('initiatives', 'InitiativeController');
     // Mission / Strategic
     Route::get('missions/anydata', [
         'as' => 'missions.data',
@@ -73,7 +79,12 @@ Route::group(['as' => 'backend.'], function() {
         'as' => 'mmembers.data',
         'uses' => 'MemberController@anyData'
     ]);
-    Route::resource('mmembers', 'MemberController');
+    // Contacts
+    Route::get('contacts/anydata', [
+        'as' => 'contacts.data',
+        'uses' => 'ContactController@anyData'
+    ]);
+    Route::resource('contacts', 'ContactController');
     // Social Media
     Route::get('social-media/anydata', ['as' => 'social-media.data', 'uses' => 'SocialMediaController@anyData']);
     Route::resource('social-media', 'SocialMediaController');

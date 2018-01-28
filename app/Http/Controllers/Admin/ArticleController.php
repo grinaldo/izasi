@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\City as Model;
-use App\Model\Province;
+use App\Model\Article as Model;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Yajra\Datatables\Datatables;
 
-class CityController extends ResourceController
+class ArticleController extends ResourceController
 {
 
     /**
@@ -17,9 +16,11 @@ class CityController extends ResourceController
      * @var array
      */
     protected $rules = [
-        'province_id' => 'required|integer|exists:provinces,id',
+        'order' => 'sometimes|nullable|integer',
+        'image' => 'sometimes|nullable|string',
         'name' => 'required|string',
-        'published' => ''
+        'description' => '',
+        'published' => '',
     ];
 
     public function __construct(Model $model)
@@ -42,15 +43,11 @@ class CityController extends ResourceController
     public function formData()
     {
         parent::formData();
-        $provinces = Province::pluck('name', 'id');
-        view()->share([
-            'provinces'=> ['' => '-'] + $provinces->toArray()
-        ]);
     }
 
     protected function doSave() 
     {
         parent::doSave();
     }
-    
+
 }

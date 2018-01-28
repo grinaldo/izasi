@@ -1,17 +1,17 @@
 @extends('admins._layouts.table')
 
 @section('page-title')
-<h3>Bank Data</h3>
+<h3>Banners Data</h3>
 @endsection
 
 @section('content')
-    <table class="table table-bordered" id="contacts-table">
+    <table class="table table-bordered" id="banners-table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Bank Name</th>
-                <th>Account Name</th>
-                <th>Account Number</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Published At</th>
                 <th>Created At</th>
                 <th>Updated At</th>
                 <th>Action</th>
@@ -23,15 +23,15 @@
 @section('page-script')
 <script>
 $(function() {
-    $('#contacts-table').DataTable({
+    $('#banners-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{!! route('backend.banks.data') !!}',
+        ajax: '{!! route('backend.missions.data') !!}',
         columns: [
             { data: 'id', name: 'id' },
-            { data: 'bank_name', name: 'bank_name' },
-            { data: 'account_name', name: 'account_name' },
-            { data: 'account_number', name: 'account_number' },
+            { data: 'name', name: 'name' },
+            { data: 'description', name: 'description' },
+            { data: 'published_at', name: 'published_at' },
             { data: 'created_at', name: 'created_at' },
             { data: 'updated_at', name: 'updated_at' },
             { data: 'action', name: 'action', orderable: false, searchable: false }

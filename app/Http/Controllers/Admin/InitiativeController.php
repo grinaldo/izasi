@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\Category as Model;
+use App\Model\Initiative as Model;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Yajra\Datatables\Datatables;
 
-class CategoryController extends ResourceController
+class InitiativeController extends ResourceController
 {
 
     /**
@@ -16,13 +16,11 @@ class CategoryController extends ResourceController
      * @var array
      */
     protected $rules = [
-        'slug' => 'alpha_dash|unique:categories,slug',
-        'name' => 'required|string|unique:categories,name',
-        'order' => 'integer',
-        'image' => 'sometimes|nullable|string',
-        'short_description' => 'sometimes|nullable|string',
-        'description' => 'sometimes|nullable|string',
-        'published' => ''
+        'order' => 'sometimes||integer',
+        'image' => '',
+        'name' => 'required|string',
+        'description' => '',
+        'published' => '',
     ];
 
     public function __construct(Model $model)
@@ -39,13 +37,6 @@ class CategoryController extends ResourceController
 
     protected function formRules()
     {
-        if ($this->model->exists) {
-            foreach(['slug','name'] as $key) {
-                $this->rules[$key] .= ','.$this->model->getKey();
-            }
-        } else {
-            $this->rules['slug'] = 'sometimes|nullable|'.$this->rules['slug'];
-        }
         parent::formRules();
     }
 
@@ -58,5 +49,5 @@ class CategoryController extends ResourceController
     {
         parent::doSave();
     }
-    
+
 }

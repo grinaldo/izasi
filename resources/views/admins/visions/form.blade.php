@@ -22,10 +22,13 @@
             ]
         ) 
     !!}
-    {!! Form::backendText('name', 'Name') !!}
+    {{-- {!! Form::backendText('url_prefix', 'URL') !!} --}}
+    {{-- {!! Form::backendText('layout', 'Layout') !!} --}}
     {!! Form::backendNumber('order', 'Order') !!}
-    {!! Form::backendTextarea('question', 'Question') !!}
-    {!! Form::backendTextarea('answer', 'Answer') !!}
+    {!! Form::backendFileBrowser('image', "Select Image")!!}
+    {!! Form::backendText('name', 'Name') !!}
+    {!! Form::backendWysiwyg('description', 'Description') !!}
+
     {!! Form::backendSelect('published', 'Published', ['No', 'Yes']) !!}
     
     <div class="form-actions">

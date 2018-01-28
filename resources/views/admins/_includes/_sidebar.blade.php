@@ -16,29 +16,17 @@
                 </ul>
             </li>
             <li>
-                <a><i class="fa fa-shopping-bag"></i> Products <span class="fa fa-chevron-down"></span></a>
+                <a><i class="fa fa-file-o"></i> Articles <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="{{ route('backend.categories.index') }}">Categories Data</a></li>
-                    <li><a href="{{ route('backend.products.index') }}">Product Data</a></li>
+                    <li><a href="{{ route('backend.articles.index') }}">Article</a></li>
                 </ul>
             </li>
             <li>
-                <a><i class="fa fa-file-text"></i> Orders <span class="fa fa-chevron-down"></span></a>
+                <a><i class="fa fa-building"></i> Companies <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="{{ route('backend.orders.index') }}">Order Data</a></li>
-                </ul>
-            </li>
-            <li>
-                <a><i class="fa fa-money"></i> Transaction <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
-                    <li><a href="{{ route('backend.wallets.index') }}">Transaction Data</a></li>
-                    <li><a href="{{ route('backend.banks.index') }}">Bank Data</a></li>
-                </ul>
-            </li>
-            <li>
-                <a><i class="fa fa-question-circle"></i> FAQs <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
-                    <li><a href="{{ route('backend.faqs.index') }}">FAQ Data</a></li>
+                    <li><a href="{{ route('backend.visions.index') }}">Vision</a></li>
+                    <li><a href="{{ route('backend.missions.index') }}">Mission</a></li>
+                    <li><a href="{{ route('backend.initiatives.index') }}">Initiative</a></li>
                 </ul>
             </li>
             <li>
@@ -58,15 +46,6 @@
                 <a><i class="fa fa-facebook"></i> Social Medias <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{ route('backend.social-media.index') }}">Social Media Data</a></li>
-                </ul>
-            </li>
-            <li>
-                <a><i class="fa fa-map-marker"></i> Location Tree <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
-                    <li><a href="{{ route('backend.locations.sync') }}">Sync Location Tree</a></li>
-                    <li><a href="{{ route('backend.provinces.index') }}">Province</a></li>
-                    <li><a href="{{ route('backend.cities.index') }}">Cities</a></li>
-                    <li><a href="{{ route('backend.districts.index') }}">District</a></li>
                 </ul>
             </li>
         </ul>
