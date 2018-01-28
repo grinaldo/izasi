@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Model\SocialMedia as model;
+use App\Model\SocialMedia as Model;
+
+use Carbon\Carbon;
 
 class SocialMediaTableSeeder extends Seeder
 {
@@ -13,32 +15,42 @@ class SocialMediaTableSeeder extends Seeder
     public function run()
     {
         $model = new Model([
-            'name' => 'facebook',
-            'url'  => 'https://facebook.com/your-url'
+            'name'  => 'facebook',
+            'image' => 'images/icon-fb.png',
+            'url'   => 'https://facebook.com/your-url',
+            'published_at' => Carbon::now()
         ]);
         $model->save();
         
         $model = new Model([
-            'name' => 'instagram',
-            'url'  => 'https://instagram.com/your-url'
+            'name'  => 'instagram',
+            'image' => 'images/icon-ig.png',
+            'url'   => 'https://instagram.com/your-url',
+            'published_at' => Carbon::now()
         ]);
         $model->save();
 
         $model = new Model([
             'name' => 'twitter',
-            'url'  => 'https://twitter.com/your-url'
+            'image' => 'images/icon-twitter.png',
+            'url'  => 'https://twitter.com/your-url',
+            'published_at' => Carbon::now()
         ]);
         $model->save();
 
         $model = new Model([
-            'name' => 'line',
-            'url'  => '@something'
+            'name' => 'google plus',
+            'image' => 'images/icon-gplus.png',
+            'url'  => 'https://plus.google.com/your-url',
+            'published_at' => Carbon::now()
         ]);
         $model->save();
 
         $model = new Model([
-            'name' => 'whatsapp',
-            'url'  => 'tel:080989999'
+            'name' => 'youtube',
+            'image' => 'images/icon-youtube.png',
+            'url'  => 'https://youtube.com/your-url',
+            'published_at' => Carbon::now()
         ]);
         $model->save();
     }

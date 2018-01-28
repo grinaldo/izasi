@@ -13,39 +13,31 @@ class PagesTableSeeder extends Seeder
     public function run()
     {
         $model = new Model([
-            'name'              => 'home-static', 
-            'title'             => '<h3>The Story <br> of Our <br> Journey</h3>',
-            'short_title'       => 'Natural Beauty',
-            'short_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid velit maiores, eum quibusdam, alias, architecto deleniti recusandae totam hic repellat ipsa cupiditate dolorum iste porro amet voluptatum, incidunt exercitationem dicta!', 
-            'description'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolorum, dignissimos sit id fugit blanditiis, numquam possimus accusamus obcaecati, aspernatur nobis ipsa itaque. Perferendis aperiam excepturi ipsa dolor mollitia numquam.',
-        ]);
-        $model->save();
-
-        $model = new Model([
-            'name'              => 'footer-static', 
-            'title'             => 'Company Bio',
-            'short_title'       => 'Company Bio',
-            'short_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid velit maiores, eum quibusdam, alias, architecto deleniti recusandae totam hic repellat ipsa cupiditate dolorum iste porro amet voluptatum, incidunt exercitationem dicta!', 
-            'description'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolorum, dignissimos sit id fugit blanditiis, numquam possimus accusamus obcaecati, aspernatur nobis ipsa itaque. Perferendis aperiam excepturi ipsa dolor mollitia numquam.',
-        ]);
-        $model->save();
-
-        $model = new Model([
-            'name'              => 'company-logo', 
-            'title'             => 'Company Logo',
-            'short_title'       => 'Company Logo',
-            'image'             => 'images/logo.png',
-            'short_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid velit maiores, eum quibusdam, alias, architecto deleniti recusandae totam hic repellat ipsa cupiditate dolorum iste porro amet voluptatum, incidunt exercitationem dicta!', 
-            'description'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolorum, dignissimos sit id fugit blanditiis, numquam possimus accusamus obcaecati, aspernatur nobis ipsa itaque. Perferendis aperiam excepturi ipsa dolor mollitia numquam.',
-        ]);
-        $model->save();
-
-        $model = new Model([
             'name'              => 'about-static', 
             'title'             => 'About Us',
-            'short_title'       => 'Clouwny Online Clothing Store',
-            'short_description' => '<p>Here in <b>Clouwny</b> we provide the high quality women wears with interesting price for you fashion lovers. We have wide range of collections from dressing, accessories, and so on to fulfill your fashion needs. </p>', 
-            'description'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolorum, dignissimos sit id fugit blanditiis, numquam possimus accusamus obcaecati, aspernatur nobis ipsa itaque. Perferendis aperiam excepturi ipsa dolor mollitia numquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, iusto eum eveniet vitae temporibus, ab eaque obcaecati voluptatum molestiae itaque pariatur sapiente nam porro ea, tempora autem. Quam, harum. Cum.',
+            'short_title'       => 'The Zinc - Auluminium Coated Steel Industries in Indonesia',
+            'short_description' => '-', 
+            'description'       => 'In 2013, IZASI association was built on the initiative of three coated steel industries, PT. NS Bluescope Indonesia, PT. Sarana Central Bajatama, Tbk, and PT. Sunrise Steel are as founders and producers of Zinc - Aluminium - Coated Sheet. Total labor in the country is more than 1,200 people directly and indirectly over 24,000 people. There are more than 500 Roll Former (RF) spread throughout Indonesia with employment upwards of more than 12,000 people. We process good quality cold rolled coil through coating process with zinc and aluminium to be finished product which is Zinc Aluminium coated-sheet. It can be applied for basic material construction in most aspects of life such as railways, oil & gas trans, building automotive, ship, construction, household, etc.',
+        ]);
+        $model->save();
+
+        $model = new Model([
+            'name'              => 'members-static', 
+            'title'             => 'Members Image',
+            'image'             => 'public/boards.png',
+            'short_title'       => '-',
+            'short_description' => '-', 
+            'description'       => '-',
+        ]);
+        $model->save();
+
+        $model = new Model([
+            'name'              => 'milestone-static', 
+            'title'             => 'milestone Image',
+            'image'             => 'public/milestone.png',
+            'short_title'       => '-',
+            'short_description' => '-', 
+            'description'       => '-',
         ]);
         $model->save();
     }

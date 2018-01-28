@@ -13,7 +13,15 @@ class CreateCompaniesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('companies', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('order')->default(1);
+            $table->string('image')->nullable();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->dateTime('published_at')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class CreateCompaniesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('companies');
     }
 }
