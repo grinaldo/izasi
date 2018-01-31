@@ -59,5 +59,15 @@ class PagesTableSeeder extends Seeder
             'description'       => '-',
         ]);
         $model->save();
+
+        $model = new Model([
+            'name'              => 'map-static', 
+            'title'             => 'Google Coordinate',
+            'image'             => '',
+            'short_title'       => '-',
+            'short_description' => '-6.217279,106.813875', 
+            'description'       => '-6.217279,106.813875',
+        ]);
+        $model->save();
     }
 }

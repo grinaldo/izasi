@@ -436,12 +436,32 @@ footer.page-footer {
         font-family: montserrat-bold;
         color: $blue;
         text-align: center;
+        font-size: 1.5em;
     }
-    input {
+    input, textarea {
+        width: 80%;
+        width: 100%;
         font-family: montserrat-bold;
-        padding: .5em 1em;
+        padding: 1em;
         border: none !important;
         outline: none;
         margin: 1em 0;
+    }
+}
+
+.circle-button {
+    background: none;
+    outline: none;
+    border: 8px solid $blue;
+    padding: 1em;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    font-family: montserrat-bold;
+    text-align: center;
+    @include add-transition(.2s);
+    &:hover {
+        background: $blue;
+        color: white;
     }
 }

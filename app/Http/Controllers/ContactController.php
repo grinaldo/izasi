@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Contact;
+use App\Model\Page;
 
 class ContactController extends Controller
 {
     public function index()
     {
-        return view('contacts.index');
+        $geocode  = \Cache::remember('company-geocode', $this->cacheMedium, function () {
+            return Page::where('name', '=', 'map-static')->first();
+        });
+        return view('contacts.index', [
+            'geocode' => $geocode
+        ]);
     }
 
     public function store(Request $request)

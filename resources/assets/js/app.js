@@ -64,4 +64,19 @@ $(document).ready(function(){
     if (homeSlider.length) {
         homeSlider.slick(mode);
     }
+    // initMap();
 });      
+
+function initGMap() {
+    var getGeocode = $('.geocode').data('geo').split(',');
+    var coord = {lat: -6.217279, lng:106.813875};
+    var map = new google.maps.Map(document.getElementById('g-map'), {
+        zoom: 18,
+        center: coord
+    });
+    var marker = new google.maps.Marker({
+        position: coord,
+        map: map
+    });
+    $('#g-map').height($('.site-form').outerHeight());
+}
