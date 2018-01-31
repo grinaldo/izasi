@@ -1,6 +1,8 @@
 // Typography
 // =============================================
 
+$blue: #FBFBFB;
+$grey: #D6D4D0;
 $pink: #fdbfb1;
 
 @font-face {
@@ -13,7 +15,32 @@ $pink: #fdbfb1;
     src: url('./fonts/gotham-thin.otf');
 }
 
+@font-face {
+    font-family: futura-bt;
+    src: url('./fonts/futurabt.ttf');
+}
+
+@font-face {
+    font-family: futura-pt;
+    src: url('./fonts/futurapt.otf');
+}
+
+@font-face {
+    font-family: montserrat-regular;
+    src: url('./fonts/montserrat-regular.otf');
+}
+
+@font-face {
+    font-family: montserrat-bold;
+    src: url('./fonts/montserrat-bold.otf');
+}
+
+@font-face {
+    font-family: montserrat-black;
+    src: url('./fonts/montserrat-black.otf');
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: gotham;
-    color: $pink;
+    font-family: futura-pt;
+    color: white;
 }

@@ -1,25 +1,40 @@
-<header>
-    <nav class="no-bg no-sd block--on-top header--sticky">
-        <div class="nav-wrapper no-bg no-sd">
-            <a href="/" class="brand-logo center">
-                <img src="{{ asset('images/logo.png') }}" alt="">
-            </a>
-            <ul id="nav-mobile pad-1x" class="left">
-                <li>
-                    <div class="hamburger">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </li>
-            </ul>
-            <ul id="nav-mobile pad-1x" class="right user-actions">
-                <li>
-                    <a href="{{ route('cart') }}" class="color--black">
-                        <i class="fa fa-icon fa-shopping-bag"></i>
-                    </a>
-                </li>
-            </ul>
+<header class="site-header" style="">
+    <div class="header_container">
+        <div class="header_logo" style="">
+            <a href="{{ route('home') }}"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
         </div>
-    </nav>
+        <div class="header_menu">
+            <ul>
+                <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ route('about') }}">About Us</a></li>
+                <li><a href="{{ route('articles.index') }}">News & Events</a></li>
+                <li><a href="{{ route('members.index') }}">Member</a></li>
+                <li><a href="{{ route('contacts.index') }}">Contact</a></li>
+            </ul>
+        </div>        
+    </div>
+    <div class="header_container--mobile">
+        <div class="header_logo--mobile">
+            <a href="{{ route('home') }}">
+                <img src="{{asset('images/logo.png')}}" alt="izasi-logo" class="home_logo__image">
+            </a>
+        </div>
+    </div>
+    <div class="header_nav--mobile" style="position: fixed; left:0; top:0;">
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
 </header>
+
+<div class="header_nav-menu--mobile">
+    <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('about') }}">About Us</a></li>
+        <li><a href="{{ route('articles.index') }}">News & Events</a></li>
+        <li><a href="{{ route('members.index') }}">Member</a></li>
+        <li><a href="{{ route('contacts.index') }}">Contact</a></li>
+    </ul>
+</div>

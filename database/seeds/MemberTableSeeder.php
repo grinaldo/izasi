@@ -18,7 +18,7 @@ class MemberTableSeeder extends Seeder
             'order'       => '1',
             'name'        => 'Simon Andrew Linge', 
             'title'       => 'Chairman',
-            'published'   => Cabon::now()
+            'published'   => Carbon::now()
         ]);
         $model->save();
 
@@ -26,7 +26,7 @@ class MemberTableSeeder extends Seeder
             'order'       => '2',
             'name'        => 'Seruni Rhea Sianipar', 
             'title'       => 'Executive Director',
-            'published'   => Cabon::now()
+            'published'   => Carbon::now()
         ]);
         $model->save();
 
@@ -34,7 +34,7 @@ class MemberTableSeeder extends Seeder
             'order'       => '3',
             'name'        => 'Henry Setiawan', 
             'title'       => 'Co - Chairman 1',
-            'published'   => Cabon::now()
+            'published'   => Carbon::now()
         ]);
         $model->save();
 
@@ -42,7 +42,7 @@ class MemberTableSeeder extends Seeder
             'order'       => '4',
             'name'        => 'Handaja Sutanto', 
             'title'       => 'Co -Chairman 2',
-            'published'   => Cabon::now()
+            'published'   => Carbon::now()
         ]);
         $model->save();
     }

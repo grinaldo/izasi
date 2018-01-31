@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(InitiativeTableSeeder::class);
         $this->call(CompanyTableSeeder::class);
         $this->call(MilestoneTableSeeder::class);
+        $this->call(MemberTableSeeder::class);
+        $this->call(ArticleTableSeeder::class);
     }
 }

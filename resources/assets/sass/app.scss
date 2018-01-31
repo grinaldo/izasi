@@ -9,10 +9,7 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Bulma SCSS
-// @import "node_modules/bulma/bulma";
-
-// Materialize SCSS
-@import "node_modules/materialize-css/sass/materialize";
+@import "node_modules/bulma/bulma";
 
 // Vendor SCSS
 @import "slick";
@@ -23,6 +20,7 @@
 @import "helpers";
 @import "animation";
 @import "header";
+@import "footer";
 @import "breadcrumb";
 @import "style";
 @import "gridding";

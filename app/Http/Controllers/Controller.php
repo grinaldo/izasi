@@ -7,6 +7,9 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
+use App\Model\Page;
+use App\Model\SocialMedia;
+
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -20,14 +23,17 @@ class Controller extends BaseController
         $this->cacheShort  = env('CACHE_BUFFER_SHORT', 1);
         $this->cacheMedium = env('CACHE_BUFFER_MEDIUM', 15);
         $this->cacheLong   = env('CACHE_BUFFER_LONG', 60);
-        // $allCategories     = \Cache::remember('nav-all-categories', $this->cacheMedium, function () {
-        //     return \App\Model\Category::asc()->published()->get();
-        // });
+        $socialMedia     = \Cache::remember('socmed', $this->cacheMedium, function () {
+            return SocialMedia::published()->get();
+        });
+        $companyAddress  = \Cache::remember('company-address', $this->cacheMedium, function () {
+            return Page::where('name', '=', 'address-static')->first();
+        });
 
-        // \View::share([
-        //     'allCategories' => $allCategories,
-        //     'baseRoute'     => $this->getControllerName() 
-        // ]);
+        \View::share([
+            'socialMedia'    => $socialMedia,
+            'companyAddress' => $companyAddress
+        ]);
     }
 
     /**

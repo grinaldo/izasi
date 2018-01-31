@@ -22,9 +22,18 @@ class PagesTableSeeder extends Seeder
         $model->save();
 
         $model = new Model([
+            'name'              => 'address-static', 
+            'title'             => 'Company Address',
+            'short_title'       => 'BRI II Building 9th Floor Suite 902. Jl Jendral Sudirman Kav 44-46, Jakarta 10210 - Indonesia',
+            'short_description' => '-', 
+            'description'       => '<p>BRI II Building 9th Floor Suite 902. <br> Jl Jendral Sudirman Kav 44-46, Jakarta 10210 - Indonesia </p>',
+        ]);
+        $model->save();
+
+        $model = new Model([
             'name'              => 'members-static', 
             'title'             => 'Members Image',
-            'image'             => 'public/boards.png',
+            'image'             => 'images/boards.png',
             'short_title'       => '-',
             'short_description' => '-', 
             'description'       => '-',
@@ -33,8 +42,18 @@ class PagesTableSeeder extends Seeder
 
         $model = new Model([
             'name'              => 'milestone-static', 
-            'title'             => 'milestone Image',
-            'image'             => 'public/milestone.png',
+            'title'             => 'Milestone Image',
+            'image'             => 'images/milestone.png',
+            'short_title'       => '-',
+            'short_description' => '-', 
+            'description'       => '-',
+        ]);
+        $model->save();
+
+        $model = new Model([
+            'name'              => 'strategic-static', 
+            'title'             => 'Strategic Image',
+            'image'             => 'images/strategic.png',
             'short_title'       => '-',
             'short_description' => '-', 
             'description'       => '-',
