@@ -22,11 +22,11 @@ set :branch, 'master'
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"
-# set :linked_files, %w{.env}
+set :linked_files, %w{.env}
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
-# set :linked_dirs, %w{storage/logs}
+set :linked_dirs, %w{storage/logs}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }

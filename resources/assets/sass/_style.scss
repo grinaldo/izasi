@@ -199,10 +199,16 @@ footer.page-footer {
 // ===========================
 
 .small-hero {
-    height: 30vh !important;
     width:100% !important;
     background-size:cover !important;
+    background-attachment: scroll !important;
     position: relative;
+    transform: translateZ(-1px) scale(1);
+    height: 30vh !important;
+    @media all and (min-width: 36em) {
+        transform: translateZ(-2px) scale(1.2);
+        background-attachment: fixed !important;
+    }
     h2 {
         @media all and (min-width: 36em) {
             font-size: 3em;
@@ -233,7 +239,7 @@ footer.page-footer {
         }
         width: 30%;
         display: inline-block;
-        margin: .25em;
+        margin: 1%;
         img {
             @media all and (min-width: 36em) {
                 width: 40%;

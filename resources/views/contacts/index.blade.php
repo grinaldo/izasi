@@ -7,7 +7,7 @@ Izasi | Contact Form
 @section('content')
 <div class="bg-light-grey mgb-min-2-step">
     
-    <section class="small-hero" style="background:url('{{asset('images/header-contact2.jpg')}}') no-repeat center;">
+    <section class="small-hero" style="background:url('{{asset('images/header-contact.jpg')}}') no-repeat center;">
         <div class="general-overlay"></div>
         <h2>CONTACT</h2>
     </section>
