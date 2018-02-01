@@ -15,14 +15,7 @@ class BannersTableSeeder extends Seeder
     {
         $model = new Model([
             'image'       => 'images/banner-1.jpg',
-            'name'        => 'BROUGHT TOGETHER', 
-            'description' => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
-            'published'   => Carbon::now()
-        ]);
-        $model->save();
-
-        $model = new Model([
-            'image'       => 'images/banner-2.jpg',
+            'order'       => 2,
             'name'        => 'BROUGHT TOGETHER', 
             'description' => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
             'published'   => Carbon::now()
@@ -31,6 +24,7 @@ class BannersTableSeeder extends Seeder
 
         $model = new Model([
             'image'       => 'images/banner-3.jpg',
+            'order'       => 1,
             'name'        => 'BROUGHT TOGETHER', 
             'description' => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
             'published'   => Carbon::now()
@@ -39,14 +33,7 @@ class BannersTableSeeder extends Seeder
 
         $model = new Model([
             'image'       => 'images/banner-4.jpg',
-            'name'        => 'BROUGHT TOGETHER', 
-            'description' => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
-            'published'   => Carbon::now()
-        ]);
-        $model->save();
-
-        $model = new Model([
-            'image'       => 'images/banner-5.jpg',
+            'order'       => 3,
             'name'        => 'BROUGHT TOGETHER', 
             'description' => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
             'published'   => Carbon::now()
@@ -55,6 +42,7 @@ class BannersTableSeeder extends Seeder
 
         $model = new Model([
             'image'       => 'images/banner-6.jpg',
+            'order'       => 4,
             'name'        => 'BROUGHT TOGETHER', 
             'description' => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
             'published'   => Carbon::now()
@@ -62,16 +50,9 @@ class BannersTableSeeder extends Seeder
         $model->save();
 
         $model = new Model([
-            'image'       => 'images/banner-7.jpg',
+            'image'       => 'images/banner-9.jpg',
             'name'        => 'BROUGHT TOGETHER', 
-            'description' => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
-            'published'   => Carbon::now()
-        ]);
-        $model->save();
-
-        $model = new Model([
-            'image'       => 'images/banner-8.jpg',
-            'name'        => 'BROUGHT TOGETHER', 
+            'order'       => 5,
             'description' => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
             'published'   => Carbon::now()
         ]);

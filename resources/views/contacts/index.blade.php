@@ -60,7 +60,7 @@ Izasi | Contact Form
 
                     <div class="form-group centerized">
                         <button type="submit" class="circle-button" onclick="">
-                            Submit
+                            SUBMIT
                         </button>
                     </div>
                 </form>

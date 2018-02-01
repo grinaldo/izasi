@@ -25,7 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $banners = Banner::asc()->published()->get();
+        $banners = \Cache::remember('home-banners', $this->cacheMedium, function () {
+            return Banner::asc()->published()->get();;
+        });
         return view('home.index', [
             'banners' => $banners
         ]);

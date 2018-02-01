@@ -17,29 +17,15 @@ class SocialMediaTableSeeder extends Seeder
         $model = new Model([
             'name'  => 'facebook',
             'image' => 'images/icon-fb.png',
+            'order' => 1,
             'url'   => 'https://facebook.com/your-url',
-            'published_at' => Carbon::now()
-        ]);
-        $model->save();
-        
-        $model = new Model([
-            'name'  => 'instagram',
-            'image' => 'images/icon-ig.png',
-            'url'   => 'https://instagram.com/your-url',
-            'published_at' => Carbon::now()
-        ]);
-        $model->save();
-
-        $model = new Model([
-            'name' => 'twitter',
-            'image' => 'images/icon-twitter.png',
-            'url'  => 'https://twitter.com/your-url',
             'published_at' => Carbon::now()
         ]);
         $model->save();
 
         $model = new Model([
             'name' => 'google plus',
+            'order' => 2,
             'image' => 'images/icon-gplus.png',
             'url'  => 'https://plus.google.com/your-url',
             'published_at' => Carbon::now()
@@ -47,7 +33,26 @@ class SocialMediaTableSeeder extends Seeder
         $model->save();
 
         $model = new Model([
+            'name' => 'twitter',
+            'order' => 3,
+            'image' => 'images/icon-twitter.png',
+            'url'  => 'https://twitter.com/your-url',
+            'published_at' => Carbon::now()
+        ]);
+        $model->save();
+        
+        $model = new Model([
+            'name'  => 'instagram',
+            'order' => 4,
+            'image' => 'images/icon-ig.png',
+            'url'   => 'https://instagram.com/your-url',
+            'published_at' => Carbon::now()
+        ]);
+        $model->save();
+
+        $model = new Model([
             'name' => 'youtube',
+            'order' => 5,
             'image' => 'images/icon-youtube.png',
             'url'  => 'https://youtube.com/your-url',
             'published_at' => Carbon::now()

@@ -24,7 +24,7 @@ class Controller extends BaseController
         $this->cacheMedium = env('CACHE_BUFFER_MEDIUM', 15);
         $this->cacheLong   = env('CACHE_BUFFER_LONG', 60);
         $socialMedia     = \Cache::remember('socmed', $this->cacheMedium, function () {
-            return SocialMedia::published()->get();
+            return SocialMedia::asc()->published()->get();
         });
         $companyAddress  = \Cache::remember('company-address', $this->cacheMedium, function () {
             return Page::where('name', '=', 'address-static')->first();

@@ -3,11 +3,12 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Model\Extension\OrderableTrait;
 use App\Model\Extension\PublishableTrait;
 
 class SocialMedia extends BaseModel
 {
-    use PublishableTrait;
+    use OrderableTrait, PublishableTrait;
 
     protected $table = 'social_medias';
 
