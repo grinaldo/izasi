@@ -57,7 +57,7 @@ Izasi | Contact Form
                         </span>
                         @endif
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LcMD0QUAAAAAANMrafoU4WKO9CioqELPcwRSybb"></div>
+                    <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_KEY')}}"></div>
                     <br><br>
                     <div class="form-group centerized">
                         <button type="submit" class="circle-button" onclick="">
