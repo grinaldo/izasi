@@ -55,12 +55,10 @@ Izasi | About Us
         <h2>PILLARS OF IZASI</h2>
     </section>
     <section class="section bg-light-grey">
-        <div class="container">
-            <div class="columns strategic-mobile">
-                @if(!empty($strategicImage))
-                <img class="centerized" src="{{asset($strategicImage->image)}}" alt="">
-                @endif
-            </div>
+        <div class="columns strategic-mobile">
+            @if(!empty($strategicImage))
+            <img class="centerized" src="{{asset($strategicImage->image)}}" alt="">
+            @endif
         </div>
     </section>
 </div>

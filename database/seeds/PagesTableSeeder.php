@@ -33,7 +33,7 @@ class PagesTableSeeder extends Seeder
         $model = new Model([
             'name'              => 'members-static', 
             'title'             => 'Members Image',
-            'image'             => 'images/boards.png',
+            'image'             => 'images/new-board.png',
             'short_title'       => '-',
             'short_description' => '-', 
             'description'       => '-',

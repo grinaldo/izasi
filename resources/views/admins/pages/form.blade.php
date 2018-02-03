@@ -26,6 +26,7 @@
     {{-- {!! Form::backendText('url_prefix', 'URL') !!} --}}
     {{-- {!! Form::backendText('layout', 'Layout') !!} --}}
     {!! Form::backendText('name', 'Name') !!}
+    {!! Form::backendFileBrowser('image', "Select Image")!!}
     {!! Form::backendWysiwyg('title', 'Title') !!}
     {!! Form::backendText('short_title', 'Short Title') !!}
     {!! Form::backendTextarea('short_description', 'Short Description') !!}

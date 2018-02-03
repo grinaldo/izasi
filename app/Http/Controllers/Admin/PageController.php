@@ -19,6 +19,7 @@ class PageController extends ResourceController
         'slug' => 'alpha_dash|unique:pages,slug',
         'url_prefix' => 'sometimes|nullable|string',
         'layout' => 'sometimes|nullable|string',
+        'image' => '',
         'name' => 'required|string|unique:pages,name',
         'title' => 'required|string',
         'short_title' => 'sometimes|nullable|string',
