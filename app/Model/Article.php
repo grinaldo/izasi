@@ -37,6 +37,7 @@ class Article extends BaseModel
         'order',
         'image',
         'name', 
+        'writer',
         'description',
         'published'
     ];

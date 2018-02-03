@@ -40,7 +40,9 @@ $factory->define(App\Model\Article::class, function (Faker\Generator $faker) {
     $firstName = $faker->firstName;
     $lastName  = $faker->lastName;
     return [
-        'name'        => 'Article by ' . $firstName.' '.$lastName,
+        'name'        => 'Article by ' . $firstName . ' ' . $lastName,
+        'image'       => 'images/banner-'.rand(1,9).'.jpg',
+        'writer'      => $firstName . ' ' . $lastName,
         'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eligendi perferendis ducimus sed aliquid natus enim, beatae velit reiciendis, inventore molestiae, neque sapiente temporibus architecto dicta, vero quaerat sequi quos.'
     ];
 });

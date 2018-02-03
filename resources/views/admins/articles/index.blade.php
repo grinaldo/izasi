@@ -10,6 +10,7 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th>Writer</th>
                 <th>Published At</th>
                 <th>Created At</th>
                 <th>Updated At</th>
@@ -29,6 +30,7 @@ $(function() {
         columns: [
             { data: 'id', name: 'id' },
             { data: 'name', name: 'name' },
+            { data: 'writer', name: 'writer' },
             { data: 'published_at', name: 'published_at' },
             { data: 'created_at', name: 'created_at' },
             { data: 'updated_at', name: 'updated_at' },

@@ -17,13 +17,17 @@ Izasi | News & Events
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-4by3">
-                            <img src="{{asset(!empty($article->image)?$article->image:asset('images/banner-1.jpg'))}}" alt="Placeholder image">
+                            <a href="{{route('articles.index').'/'.$article->slug}}">
+                                <img src="{{asset(!empty($article->image)?$article->image:asset('images/banner-1.jpg'))}}" alt="Placeholder image">
+                            </a>
                         </figure>
                     </div>
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                                <p class="title is-5">{{ strtoupper($article->name) }}</p>
+                                <a href="{{route('articles.index').'/'.$article->slug}}">
+                                    <p class="title is-5">{{ strtoupper($article->name) }}</p>
+                                </a>
                             </div>
                         </div>
                         <div class="content">

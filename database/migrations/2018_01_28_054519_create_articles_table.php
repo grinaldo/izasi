@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->integer('order')->default(1);
             $table->string('image')->nullable();
             $table->string('slug')->unique();
+            $table->string('writer');
             $table->string('name');
             $table->text('description')->nullable();
             $table->dateTime('published_at')->nullable();

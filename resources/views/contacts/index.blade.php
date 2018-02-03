@@ -57,7 +57,8 @@ Izasi | Contact Form
                         </span>
                         @endif
                     </div>
-
+                    <div class="g-recaptcha" data-sitekey="6LcMD0QUAAAAAANMrafoU4WKO9CioqELPcwRSybb"></div>
+                    <br><br>
                     <div class="form-group centerized">
                         <button type="submit" class="circle-button" onclick="">
                             SUBMIT
@@ -94,4 +95,5 @@ function initGMap() {
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_KEY')}}&callback=initGMap">
 </script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 @endsection

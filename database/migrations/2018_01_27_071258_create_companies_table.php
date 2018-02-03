@@ -17,6 +17,7 @@ class CreateCompaniesTable extends Migration
             $table->increments('id');
             $table->integer('order')->default(1);
             $table->string('image')->nullable();
+            $table->string('link')->nullable();
             $table->string('name');
             $table->text('description')->nullable();
             $table->dateTime('published_at')->nullable();

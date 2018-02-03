@@ -26,6 +26,7 @@
     {{-- {!! Form::backendText('layout', 'Layout') !!} --}}
     {!! Form::backendNumber('order', 'Order') !!}
     {!! Form::backendFileBrowser('image', "Select Image")!!}
+    {!! Form::backendText('writer', 'Writer') !!}
     {!! Form::backendText('name', 'Name') !!}
     {!! Form::backendWysiwyg('description', 'Description') !!}
 
