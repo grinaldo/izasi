@@ -11395,6 +11395,10 @@ $(document).ready(function () {
     if (homeSlider.length) {
         homeSlider.slick(mode);
     }
+
+    // Init Height Pad
+    var headerHeight = $('.site-header').outerHeight();
+    $('.site-content').css('padding-top', headerHeight + 'px');
     // initMap();
 });
 

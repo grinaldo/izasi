@@ -1,6 +1,6 @@
 ## About Izasi
 
-A clothing store for women
+Indonesia Steel Industry
 
 
 ## Installation

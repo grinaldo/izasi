@@ -160,3 +160,13 @@ clear-height {
     }
     display:none;
 }
+
+.fixed-header {
+    @include add-transition(.5s);
+    @media only screen and (min-width: 36em) {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    }
+}

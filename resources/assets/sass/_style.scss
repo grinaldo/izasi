@@ -503,6 +503,18 @@ footer.page-footer {
         border: none !important;
         outline: none;
         margin: 1em 0;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #d8d6d4;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: #d8d6d4;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: #d8d6d4;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: #d8d6d4;
+        }
     }
 }
 

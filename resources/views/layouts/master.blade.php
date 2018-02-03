@@ -12,7 +12,9 @@
         
         <div id="app"></div> 
         @include('_includes._notification')
-        @yield('content')  
+        <div class="site-content">
+            @yield('content')  
+        </div>
 
         @include('_includes._footer')
         @include('_includes._foot-script')

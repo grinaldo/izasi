@@ -1,4 +1,4 @@
-<header class="site-header" style="">
+<header class="site-header fixed-header" style="">
     <div class="header_container">
         <div class="header_logo" style="">
             <a href="{{ route('home') }}"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
