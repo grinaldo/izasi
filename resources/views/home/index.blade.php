@@ -35,7 +35,7 @@ Izasi | Indonesia Zinc-Alumunium Steel Industries
 </section>
 <section class="home_footer" style="position: fixed; color: white; z-index: 9999;">
     <small>
-        Copyright © 2017 Izasi all rights reserved
+        Copyright © 2018 Izasi all rights reserved
     </small>
 </section>
 @endsection

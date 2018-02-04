@@ -18,7 +18,7 @@ class CompanyTableSeeder extends Seeder
             'order'       => 1,
             'name'        => 'PT. NS Bluescope Indonesia', 
             'image'       => 'images/company-bluescope.png',
-            'link'        => 'bluescope.com',
+            'link'        => 'bluescope.co.id/about/our-company-id/ ',
             'description' => 'BlueScope Steel Indonesia (BSI) owned by Bluescope Steel Limited which was established in 1994. The Company established a metal coating line 1 and painting line facility in Cilegon. The machinery capacity was for 120,000 Ton.  To bring access to new technologies and assist in expanding the reach of wider customers outside of Australia Because of the increase demand of coated steel, then BSI expanded with additional machinery capacity which was metal coating line 2 for 180,000 Ton. In 2013 BlueScope Indonesia had joint venture with Nippon Steel Sumitomo & Metal Corporation. Mr. Simon Andrew Linge as Chairman in IZASI is currently as President Indonesia & Senior Vice President Operation in PT. NS BlueScope Indonesia. PT. NS BlueScope Indonesia is now the leading local zinc / aluminum coatings manufacturing. Zincalume (coated steel) and Colorbond (painted steel) are company’s product which have the gold standard for corrosion resistance and long life.',
             'published'   => Carbon::now()
         ]);

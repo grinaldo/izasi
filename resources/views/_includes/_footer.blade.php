@@ -11,4 +11,9 @@
             @endif
         </ul>
     </div>
+    <div>
+        <small>
+            Copyright © 2018 Izasi all rights reserved
+        </small>
+    </div>
 </footer>

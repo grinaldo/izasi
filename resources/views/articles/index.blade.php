@@ -5,7 +5,7 @@ Izasi | News & Events
 @endsection
 
 @section('content')
-<section class="small-hero" style="background:url('{{asset('images/banner-3.jpg')}}') no-repeat center;">
+<section class="small-hero" style="background:url('{{asset('images/header-articles.jpg')}}') no-repeat center;">
     <div class="general-overlay"></div>
     <h2>NEWS & EVENTS</h2>
 </section>

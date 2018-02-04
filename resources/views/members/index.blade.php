@@ -12,7 +12,7 @@ Izasi | Members
 <div class="section">
     <div class="container is-fluid">
         <div class="columns members-desktop">
-            <img src="{{asset(!empty($memberimage->image) ? $memberImage->image : 'images/boards.png')}}" alt="">
+            <img class="centerized pad-2-step" src="{{asset(!empty($membersImage->image) ? $membersImage->image : 'images/boards.png')}}" alt="">
         </div>
         <div class="columns members-mobile">
             <h2>OUR MEMBERS</h2>
@@ -48,10 +48,14 @@ Izasi | Members
             </div>    
             <div class="column companies_description is-four-fifths-desktop is-one-full-mobile">
                 <div class="companies_description_title_container">
-                    <h3>{{$company->name}}</h3>
-                    <a href="{{$company->link}}" class="small-btn--blue">VISIT WEBSITE</a>
+                    <div class="companies_description-title centerized">
+                        <h3>{{$company->name}}</h3>
+                    </div>
+                    <div class="companies_description-link centerized">
+                        <a href="{{$company->link}}" class="small-btn--blue">VISIT WEBSITE</a>
+                    </div>
                 </div>
-                <div>
+                <div class="centerized">
                     <p>{{$company->description}}</p>
                 </div>
             </div>

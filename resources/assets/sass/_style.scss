@@ -464,6 +464,26 @@ footer.page-footer {
                 overflow: auto;
                 margin: 1em 0;
             }
+            .companies_description-title{
+                overflow: auto;
+                h3 {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+            }
+            .companies_description-link {
+                padding: 1em;
+                @media all and (min-width: 36em) {
+                    padding: .25em 1em;
+                }
+            }
+            .companies_description-title,
+            .companies_description-link {
+                @media all and (min-width: 36em) {
+                    float: left;
+                }
+                float: none;
+            }
         }
         h3 {
             font-size: 1.5em !important;

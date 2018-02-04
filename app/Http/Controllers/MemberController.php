@@ -15,7 +15,6 @@ class MemberController extends Controller
         $members   = Member::asc()->published()->get();
         $companies = Company::asc()->published()->get();
         $memberImg = Page::where('name', '=', 'members-static')->first();
-
         return view('members.index', [
             'members'      => $members,
             'companies'    => $companies,
