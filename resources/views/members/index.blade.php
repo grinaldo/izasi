@@ -18,11 +18,13 @@ Izasi | Members
             <h2>OUR MEMBERS</h2>
             @foreach($members as $member)
             <div class="card is-full-mobile">
+                @if(!empty($member->image))
                 <div class="card-image">
                     <figure class="image is-4by3">
                         <img src="{{asset(!empty($member->image)?$member->image:asset('images/banner-1.jpg'))}}" alt="Placeholder image">
                     </figure>
                 </div>
+                @endif
                 <div class="card-content">
                     <div class="media">
                         <div class="media-content">
@@ -52,10 +54,10 @@ Izasi | Members
                         <h3>{{$company->name}}</h3>
                     </div>
                     <div class="companies_description-link centerized">
-                        <a href="{{$company->link}}" class="small-btn--blue">VISIT WEBSITE</a>
+                        <a href="{{url($company->link)}}" class="small-btn--blue">VISIT WEBSITE</a>
                     </div>
                 </div>
-                <div class="centerized">
+                <div class="justified">
                     <p>{{$company->description}}</p>
                 </div>
             </div>

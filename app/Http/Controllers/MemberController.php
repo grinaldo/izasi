@@ -18,7 +18,8 @@ class MemberController extends Controller
         return view('members.index', [
             'members'      => $members,
             'companies'    => $companies,
-            'membersImage' => $memberImg
+            'membersImage' => $memberImg,
+            'active'       => 'member'
         ]);
     }
 }

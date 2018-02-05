@@ -8,11 +8,13 @@ use Carbon\Carbon;
 
 class ArticleController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $articles = Article::published()->orderBy('created_at', 'DESC')->paginate(6);
+        $sorter = !empty($request->sortby) ? strtoupper($request->sortby) : 'DESC';
+        $articles = Article::published()->orderBy('created_at', $sorter)->paginate(6);
         return view('articles.index', [
-            'articles' => $articles
+            'articles' => $articles,
+            'active'   => 'article'
         ]);
     }
 
@@ -27,7 +29,8 @@ class ArticleController extends Controller
         return view('articles.show', [
             'article'    => $article,
             'others'     => $articleOthers,
-            'updateTime' => new Carbon($article->updated_at)
+            'updateTime' => new Carbon($article->updated_at),
+            'active'     => 'article'
         ]);
     }
 }

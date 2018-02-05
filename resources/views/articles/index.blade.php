@@ -11,6 +11,15 @@ Izasi | News & Events
 </section>
 <div class="section">
     <div class="container is-fluid">
+        <div class="columns">
+            <div class="column is-full has-text-right">
+                <select class="sorter classic" name="sortby" id="" onchange="javascript:location.href = this.value;">
+                    <option value="/">-- Sort By --</option>
+                    <option value="?sortby=desc">Newest</option>
+                    <option value="?sortby=asc">Oldest</option>
+                </select>
+            </div>
+        </div>
         <div class="columns article-container">
             @foreach($articles as $article)
             <div class="column is-one-third-desktop is-full-mobile">

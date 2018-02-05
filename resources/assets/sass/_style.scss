@@ -303,6 +303,80 @@ footer.page-footer {
 // Articles
 // ===========================
 
+.sorter {
+    /* styling */
+    background-color: white;
+    border: thin solid $darkgrey;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 8em 0.5em 1em;
+
+    /* reset */
+
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: montserrat-regular !important;
+}
+
+select.classic {
+    background-image:
+    linear-gradient(60deg, transparent 50%, white 50%),
+    linear-gradient(120deg, white 50%, transparent 50%),
+    linear-gradient(to right, $blue, $blue);
+    background-position:
+    calc(104% - 25px) calc(.75em + 2px),
+    calc(103% - 15px) calc(.75em + 2px),
+    100% 0;
+    background-size:
+    10px 10px,
+    10px 10px,
+    2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+
+select.classic:focus {
+    background-image:
+    linear-gradient(60deg, white 50%, transparent 50%),
+    linear-gradient(120deg, transparent 50%, white 50%),
+    linear-gradient(to right, gray, gray);
+    background-position:
+    calc(100% - 11px) .9em,
+    calc(100% - 19px) .9em,
+    100% 0;
+    background-size:
+    10px 10px,
+    10px 10px,
+    2.5em 2.5em;
+    background-repeat: no-repeat;
+    border-color: $darkgrey;
+    outline: 0;
+}
+
+select.classic:focus {
+    background-image:
+    linear-gradient(60deg, white 50%, transparent 50%),
+    linear-gradient(120deg, transparent 50%, white 50%),
+    linear-gradient(to right, gray, gray);
+    background-position:
+    calc(100% - 11px) .9em,
+    calc(100% - 19px) .9em,
+    100% 0;
+    background-size:
+    10px 10px,
+    10px 10px,
+    2.5em 2.5em;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+}
+
+
 .article-container {
     display: flex;
     flex-wrap: wrap;
@@ -356,6 +430,10 @@ footer.page-footer {
 .article-info{
     font-family: montserrat-regular;
     padding: 1em 0;
+}
+
+.article-content {
+    text-align: justify !important;
 }
 
 .article-info {

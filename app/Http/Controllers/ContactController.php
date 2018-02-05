@@ -14,7 +14,8 @@ class ContactController extends Controller
             return Page::where('name', '=', 'map-static')->first();
         });
         return view('contacts.index', [
-            'geocode' => $geocode
+            'geocode' => $geocode,
+            'active'  => 'contact'
         ]);
     }
 

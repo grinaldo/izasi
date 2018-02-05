@@ -18,7 +18,7 @@ class SocialMediaTableSeeder extends Seeder
             'name'  => 'facebook',
             'image' => 'images/icon-fb.png',
             'order' => 1,
-            'url'   => 'https://facebook.com/your-url',
+            'url'   => 'https://www.facebook.com/PojokInspirasiBaja/',
             'published_at' => Carbon::now()
         ]);
         $model->save();

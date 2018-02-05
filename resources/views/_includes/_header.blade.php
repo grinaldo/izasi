@@ -5,11 +5,11 @@
         </div>
         <div class="header_menu">
             <ul>
-                <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('about') }}">About Us</a></li>
-                <li><a href="{{ route('articles.index') }}">News & Events</a></li>
-                <li><a href="{{ route('members.index') }}">Member</a></li>
-                <li><a href="{{ route('contacts.index') }}">Contact</a></li>
+                <li><a  href="{{ route('home') }}">Home</a></li>
+                <li><a class="{{(!empty($active) && $active == 'about') ? 'header-active' : ''}}"href="{{ route('about') }}">About Us</a></li>
+                <li><a class="{{(!empty($active) && $active == 'article') ? 'header-active' : ''}}"href="{{ route('articles.index') }}">News & Events</a></li>
+                <li><a class="{{(!empty($active) && $active == 'member') ? 'header-active' : ''}}"href="{{ route('members.index') }}">Member</a></li>
+                <li><a class="{{(!empty($active) && $active == 'contact') ? 'header-active' : ''}}"href="{{ route('contacts.index') }}">Contact</a></li>
             </ul>
         </div>        
     </div>

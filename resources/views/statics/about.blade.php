@@ -43,7 +43,7 @@ Izasi | About Us
         <div class="row">
             <div class="col s12 m12">
                 @if(!empty($about->description))
-                <p>{{$about->description}}</p>
+                <p class="justified">{{$about->description}}</p>
                 @endif
             </div>
         </div>

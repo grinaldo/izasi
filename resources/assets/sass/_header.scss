@@ -47,6 +47,10 @@ $grey: #9B9691;
 // Header
 // =============================================
 
+.header-active {
+    color: $grey !important;
+}
+
 .site-header {
     width: 100%;
     background: rgb(227,227,227);

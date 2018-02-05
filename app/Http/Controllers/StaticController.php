@@ -48,7 +48,8 @@ class StaticController extends Controller
             'strategicImage' => $strategicImg,
             'visions'        => $visions,
             'missions'       => $missions,
-            'initiatives'    => $initiatives
+            'initiatives'    => $initiatives,
+            'active'         => 'about'
         ]);
     }
     
