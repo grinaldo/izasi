@@ -53,7 +53,7 @@ class PagesTableSeeder extends Seeder
         $model = new Model([
             'name'              => 'strategic-static', 
             'title'             => 'Strategic Image',
-            'image'             => 'images/strategic.png',
+            'image'             => 'images/pillar-big.png',
             'short_title'       => '-',
             'short_description' => '-', 
             'description'       => '-',
