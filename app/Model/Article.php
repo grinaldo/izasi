@@ -36,9 +36,11 @@ class Article extends BaseModel
     protected $fillable = [
         'order',
         'image',
-        'name', 
         'writer',
+        'name', 
         'description',
+        'name_ina', 
+        'description_ina',
         'published'
     ];
     

@@ -16,32 +16,56 @@ class MemberTableSeeder extends Seeder
     {
         $model = new Model([
             'order'       => '1',
-            'name'        => 'Simon Andrew Linge', 
-            'title'       => 'Chairman',
+            'name'        => 'Chariman', 
+            'title'       => '',
             'published'   => Carbon::now()
         ]);
         $model->save();
 
         $model = new Model([
             'order'       => '2',
-            'name'        => 'Seruni Rhea Sianipar', 
-            'title'       => 'Executive Director',
+            'name'        => 'Executive Director', 
+            'title'       => '',
             'published'   => Carbon::now()
         ]);
         $model->save();
 
         $model = new Model([
             'order'       => '3',
-            'name'        => 'Henry Setiawan', 
-            'title'       => 'Co - Chairman 1',
+            'name'        => 'Co - Chairman 1', 
+            'title'       => '',
             'published'   => Carbon::now()
         ]);
         $model->save();
 
         $model = new Model([
             'order'       => '4',
-            'name'        => 'Handaja Sutanto', 
-            'title'       => 'Co -Chairman 2',
+            'name'        => 'Co - Chairman 2', 
+            'title'       => '',
+            'published'   => Carbon::now()
+        ]);
+        $model->save();
+
+        $model = new Model([
+            'order'       => '5',
+            'name'        => 'Government & Policy', 
+            'title'       => '',
+            'published'   => Carbon::now()
+        ]);
+        $model->save();
+
+        $model = new Model([
+            'order'       => '6',
+            'name'        => 'Technical & Development', 
+            'title'       => '',
+            'published'   => Carbon::now()
+        ]);
+        $model->save();
+
+        $model = new Model([
+            'order'       => '7',
+            'name'        => 'Communication & Media', 
+            'title'       => '',
             'published'   => Carbon::now()
         ]);
         $model->save();

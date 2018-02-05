@@ -24,6 +24,8 @@ class Mission extends BaseModel
         'image',
         'name', 
         'description',
+        'name_ina', 
+        'description_ina',
         'published'
     ];
     

@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
 @section('page-title')
+@if(\Session::get('locale') == 'en_US')
 Izasi | Contact Form
+@else
+Izasi | Hubungi Kami
+@endif
 @endsection
 
 @section('content')
@@ -9,18 +13,25 @@ Izasi | Contact Form
     
     <section class="small-hero" style="background:url('{{asset('images/header-contact.jpg')}}') no-repeat center;">
         <div class="general-overlay"></div>
+        @if(\Session::get('locale') == 'en_US')
         <h2>CONTACT</h2>
+        @else
+        <h2>KONTAK</h2>
+        @endif
     </section>
 
     <section class="section container">
         <div class="columns">
             <div class="column is-half-desktop is-full-mobile">
                 <form class="site-form" role="form" method="POST" action="{{ route('contacts.store') }}">
+                    @if(\Session::get('locale') == 'en_US')
                     <h3>Contact Us Now</h3>
+                    @else
+                    <h3>Hubungi Kami</h3>
+                    @endif
                     {{ csrf_field() }}
                     <div class="centerized form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                        <input id="name" type="text" class="form-control form-site-input" name="name" value="{{ old('name') }}" placeholder="Your Name" required autofocus>
-
+                        <input id="name" type="text" class="form-control form-site-input" name="name" value="{{ old('name') }}" placeholder="{{(\Session::get('locale') == 'en_US') ? 'Your Name' : 'Nama Anda'}}" required autofocus>
                         @if ($errors->has('name'))
                         <span class="help-block">
                             <strong class="warning-text">{{ $errors->first('name') }}</strong>
@@ -29,7 +40,7 @@ Izasi | Contact Form
                     </div>
 
                     <div class="centerized form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                        <input id="email" type="email" class="form-control form-site-input" name="email" value="{{ old('email') }}"  placeholder="Your Email" autofocus>
+                        <input id="email" type="email" class="form-control form-site-input" name="email" value="{{ old('email') }}"  placeholder="{{(\Session::get('locale') == 'en_US') ? 'Your Email' : 'Email Anda'}}" autofocus>
 
                         @if ($errors->has('email'))
                         <span class="help-block">
@@ -39,7 +50,7 @@ Izasi | Contact Form
                     </div>
 
                     <div class="centerized form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                        <input id="phone" type="text" class="form-control form-site-input" name="phone" value="{{ old('phone') }}"  placeholder="Your Phone" required autofocus>
+                        <input id="phone" type="text" class="form-control form-site-input" name="phone" value="{{ old('phone') }}"  placeholder="{{(\Session::get('locale') == 'en_US') ? 'Your Phone' : 'Telepon Anda'}}" required autofocus>
 
                         @if ($errors->has('phone'))
                         <span class="help-block">
@@ -49,7 +60,7 @@ Izasi | Contact Form
                     </div>
 
                     <div class="centerized form-group{{ $errors->has('content') ? ' has-error' : '' }}">
-                        <textarea id="content" class="form-control form-site-input materialize-textarea" name="content" value="{{ old('content') }}"  placeholder="Message" required autofocus></textarea>
+                        <textarea id="content" class="form-control form-site-input materialize-textarea" name="content" value="{{ old('content') }}"  placeholder="{{(\Session::get('locale') == 'en_US') ? 'Message' : 'Pesan'}}" required autofocus></textarea>
 
                         @if ($errors->has('content'))
                         <span class="help-block">
@@ -57,11 +68,15 @@ Izasi | Contact Form
                         </span>
                         @endif
                     </div>
-                    <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_KEY')}}"></div>
+                    <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_KEY')}}"></div>
                     <br><br>
                     <div class="form-group centerized">
                         <button type="submit" class="circle-button" onclick="">
+                            @if(\Session::get('locale') == 'en_US')
                             SUBMIT
+                            @else
+                            AJUKAN
+                            @endif
                         </button>
                     </div>
                 </form>

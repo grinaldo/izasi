@@ -1,22 +1,36 @@
 @extends('layouts.master')
 
 @section('page-title')
+@if(\Session::get('locale') == 'en_US')
 Izasi | News & Events
+@else
+Izasi | Berita & Kegiatan
+@endif
 @endsection
 
 @section('content')
 <section class="small-hero" style="background:url('{{asset('images/header-articles.jpg')}}') no-repeat center;">
     <div class="general-overlay"></div>
+    @if(\Session::get('locale') == 'en_US')
     <h2>NEWS & EVENTS</h2>
+    @else
+    <h2>BERITA</h2>
+    @endif
 </section>
 <div class="section">
     <div class="container is-fluid">
         <div class="columns">
             <div class="column is-full has-text-right">
                 <select class="sorter classic" name="sortby" id="" onchange="javascript:location.href = this.value;">
+                    @if(\Session::get('locale') == 'en_US')
                     <option value="/">-- Sort By --</option>
                     <option value="?sortby=desc">Newest</option>
                     <option value="?sortby=asc">Oldest</option>
+                    @else
+                    <option value="/">-- Urutkan --</option>
+                    <option value="?sortby=desc">Terbaru</option>
+                    <option value="?sortby=asc">Terlama</option>
+                    @endif
                 </select>
             </div>
         </div>
@@ -35,14 +49,26 @@ Izasi | News & Events
                         <div class="media">
                             <div class="media-content">
                                 <a href="{{route('articles.index').'/'.$article->slug}}">
+                                    @if(\Session::get('locale') == 'en_US')
                                     <p class="title is-5">{{ strtoupper($article->name) }}</p>
+                                    @else
+                                    <p class="title is-5">{{ strtoupper($article->name_ina) }}</p>
+                                    @endif
                                 </a>
                             </div>
                         </div>
                         <div class="content">
+                            @if(\Session::get('locale') == 'en_US')
                             {{ substr($article->description, 0, 140)}} ...
+                            @else
+                            {{ substr($article->description_ina, 0, 140)}} ...
+                            @endif
                             <br><br>
+                            @if(\Session::get('locale') == 'en_US')
                             <a class="small-btn--blue" href="{{route('articles.index').'/'.$article->slug}}"> READ MORE</a>
+                            @else
+                            <a class="small-btn--blue" href="{{route('articles.index').'/'.$article->slug}}"> BACA</a>
+                            @endif
                         </div>
                     </div>
                 </div>

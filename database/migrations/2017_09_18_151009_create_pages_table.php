@@ -25,6 +25,12 @@ class CreatePagesTable extends Migration
             $table->string('short_description')->nullable();
             $table->text('description')->nullable();
 
+            $table->string('image_ina')->nullable();
+            $table->string('title_ina');
+            $table->string('short_title_ina')->nullable();
+            $table->string('short_description_ina')->nullable();
+            $table->text('description_ina')->nullable();
+
             $table->dateTime('published_at')->nullable();
             $table->timestamps();
         });

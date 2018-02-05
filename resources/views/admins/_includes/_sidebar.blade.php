@@ -24,6 +24,7 @@
             <li>
                 <a><i class="fa fa-building"></i> Companies <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
+                    <li><a href="{{ route('backend.companies.index') }}">Subsidiary</a></li>
                     <li><a href="{{ route('backend.visions.index') }}">Vision</a></li>
                     <li><a href="{{ route('backend.missions.index') }}">Mission</a></li>
                     <li><a href="{{ route('backend.initiatives.index') }}">Initiative</a></li>

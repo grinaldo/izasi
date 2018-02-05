@@ -43,6 +43,11 @@ class Page extends BaseModel
         'short_title',
         'short_description', 
         'description',
+        'image_ina',
+        'title_ina',
+        'short_title_ina',
+        'short_description_ina',
+        'description_ina',
         'published'
     ];
 

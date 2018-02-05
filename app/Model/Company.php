@@ -24,6 +24,7 @@ class Company extends BaseModel
         'image',
         'name', 
         'description',
+        'description_ina',
         'link',
         'published'
     ];

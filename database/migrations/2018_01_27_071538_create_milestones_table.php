@@ -19,6 +19,8 @@ class CreateMilestonesTable extends Migration
             $table->string('year')->nullable();
             $table->string('name');
             $table->text('description')->nullable();
+            $table->string('name_ina');
+            $table->text('description_ina')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->timestamps();
         });

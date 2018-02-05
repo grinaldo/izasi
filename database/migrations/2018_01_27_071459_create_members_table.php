@@ -17,9 +17,11 @@ class CreateMembersTable extends Migration
             $table->increments('id');
             $table->integer('order')->default(1);
             $table->string('image')->nullable();
-            $table->string('title')->nullable();
             $table->string('name');
+            $table->string('title')->nullable();
             $table->text('description')->nullable();
+            $table->string('title_ina')->nullable();
+            $table->text('description_ina')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->timestamps();
         });

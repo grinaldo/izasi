@@ -24,6 +24,8 @@ class Banner extends BaseModel
         'image',
         'name', 
         'description',
+        'name_ina', 
+        'description_ina',
         'order',
         'published'
     ];

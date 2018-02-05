@@ -15,22 +15,38 @@ Izasi | Indonesia Zinc-Alumunium Steel Industries
     <div style="background:url('{{asset($banner->image)}}') no-repeat center; height: 100vh !important; width:100% !important; background-size:cover !important; position: relative;">
         <div class="home_hero__slider-overlay"></div>
         <div class="home_hero__slider-text">
+            @if(\Session::get('locale') == 'en_US')
             <h2 class ="home_hero__slider-heading">
                 {{$banner->name}}
             </h2>
             <p class="home_hero__slider-description">
-                {{$banner->description}}
+                {!! $banner->description !!}
             </p>
+            @else
+            <h2 class ="home_hero__slider-heading">
+                {{$banner->name_ina}}
+            </h2>
+            <p class="home_hero__slider-description">
+                {!! $banner->description_ina !!}
+            </p>
+            @endif
         </div>
     </div>
     @endforeach
 </section>
 <section class="home_menu">
     <ul>
+        @if(\Session::get('locale') == 'en_US')
         <li><a href="{{route('about')}}">ABOUT US</a></li>
         <li><a href="{{route('articles.index')}}">NEWS & EVENT</a></li>
         <li><a href="{{route('members.index')}}">MEMBERS</a></li>
         <li><a href="{{route('contacts.index')}}">CONTACT</a></li>
+        @else
+        <li><a href="{{route('about')}}">TENTANG KAMI</a></li>
+        <li><a href="{{route('articles.index')}}">BERITA</a></li>
+        <li><a href="{{route('members.index')}}">KEANGGOTAAN</a></li>
+        <li><a href="{{route('contacts.index')}}">KONTAK</a></li>
+        @endif
     </ul>
 </section>
 <section class="home_footer" style="position: fixed; color: white; z-index: 9999;">

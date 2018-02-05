@@ -25,6 +25,11 @@ class PageController extends ResourceController
         'short_title' => 'sometimes|nullable|string',
         'short_description' => 'sometimes|nullable|string',
         'description' => 'sometimes|nullable|string',
+        'image_ina' => '',
+        'title_ina' => 'required|string',
+        'short_title_ina' => 'sometimes|nullable|string',
+        'short_description_ina' => 'sometimes|nullable|string',
+        'description_ina' => 'sometimes|nullable|string',
         'published' => ''
     ];
 

@@ -205,9 +205,9 @@ footer.page-footer {
     position: relative;
     transform: translateZ(-1px) scale(1);
     height: 30vh !important;
+    background-attachment: fixed !important;
     @media all and (min-width: 36em) {
         transform: translateZ(-2px) scale(1.2);
-        background-attachment: fixed !important;
     }
     h2 {
         @media all and (min-width: 36em) {
@@ -545,6 +545,10 @@ select.classic:focus {
             .companies_description-title{
                 overflow: auto;
                 h3 {
+                    @media all and (min-width: 36em) {
+                        width: auto !important;
+                    }
+                    width: 100% !important;
                     margin: 0 !important;
                     padding: 0 !important;
                 }

@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
 @section('page-title')
+@if(\Session::get('locale') == 'en_US')
 Izasi | News & Events - {{$article->name}}
+@else
+Izasi | Berita & Kegiatan - {{$article->name_ina}}
+@endif
 @endsection
 
 @section('content')
@@ -12,7 +16,11 @@ Izasi | News & Events - {{$article->name}}
                 @if(!empty($article->image))
                 <img src="{{ asset($article->image) }}" alt="">
                 @endif
+                @if(\Session::get('locale') == 'en_US')
                 <h1 class="article-title">{{ strtoupper($article->name) }}</h1>
+                @else
+                <h1 class="article-title">{{ strtoupper($article->name_ina) }}</h1>
+                @endif
                 <div class="article-share">
                     <ul>
                         <li><a href="https://www.facebook.com/sharer/sharer.php?u={{url('/articles/'.$article->slug)}}"><img src="{{asset('images/icon-c-facebook.png')}}" alt=""></a></li>
@@ -23,10 +31,18 @@ Izasi | News & Events - {{$article->name}}
                     </ul>
                 </div>
                 <div class="article-info">
+                    @if(\Session::get('locale') == 'en_US')
                     Updated: {{ $updateTime->format('d M Y') }} | Written By: {{ $article->writer }}
+                    @else
+                    Diperbarui: {{ $updateTime->format('d M Y') }} | Ditulis oleh: {{ $article->writer }}
+                    @endif
                 </div>
                 <div class="article-content">
+                    @if(\Session::get('locale') == 'en_US')
                     {!! $article->description !!}
+                    @else
+                    {!! $article->description_ina !!}
+                    @endif
                 </div>
             </div>
             <div class="column is-one-quarter-desktop is-full-mobile bg-grey">
@@ -43,14 +59,26 @@ Izasi | News & Events - {{$article->name}}
                         <div class="media">
                             <div class="media-content">
                                 <a href="{{route('articles.index').'/'.$article->slug}}">
+                                    @if(\Session::get('locale') == 'en_US')
                                     <p class="title is-5">{{ strtoupper($article->name) }}</p>
+                                    @else
+                                    <p class="title is-5">{{ strtoupper($article->name_ina) }}</p>
+                                    @endif
                                 </a>
                             </div>
                         </div>
                         <div class="content">
+                            @if(\Session::get('locale') == 'en_US')
                             {{ substr($article->description, 0, 140)}} ...
+                            @else
+                            {{ substr($article->description_ina, 0, 140)}} ...
+                            @endif
                             <br><br>
+                            @if(\Session::get('locale') == 'en_US')
                             <a class="small-btn--blue" href="{{route('articles.index').'/'.$article->slug}}"> READ MORE</a>
+                            @else
+                            <a class="small-btn--blue" href="{{route('articles.index').'/'.$article->slug}}"> BACA</a>
+                            @endif
                         </div>
                     </div>
                 </div>

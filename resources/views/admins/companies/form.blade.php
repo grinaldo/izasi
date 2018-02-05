@@ -24,10 +24,10 @@
     !!}
     {{-- {!! Form::backendText('url_prefix', 'URL') !!} --}}
     {{-- {!! Form::backendText('layout', 'Layout') !!} --}}
+    {!! Form::backendSelect('published', 'Published', ['No', 'Yes']) !!}
     {!! Form::backendNumber('order', 'Order') !!}
     {!! Form::backendFileBrowser('image', "Select Image")!!}
-    {!! Form::backendText('writer', 'Writer') !!}
-    {!! Form::backendSelect('published', 'Published', ['No', 'Yes']) !!}
+    {!! Form::backendText('name', 'Name') !!}
 
     <div class="x_content">
         <div class="" role="tabpanel" data-example-id="togglable-tabs">
@@ -36,12 +36,10 @@
                 <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Indonesia Content</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
-                <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">                   
-                    {!! Form::backendText('name', "Select name")!!}
+                <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                     {!! Form::backendWysiwyg('description', 'Description') !!}
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
-                    {!! Form::backendText('name_ina', "Select name")!!}
                     {!! Form::backendWysiwyg('description_ina', 'Description') !!}
                 </div>
             </div>

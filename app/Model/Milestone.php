@@ -24,6 +24,8 @@ class Milestone extends BaseModel
         'year',
         'name', 
         'description',
+        'name_ina', 
+        'description_ina',
         'published'
     ];
     

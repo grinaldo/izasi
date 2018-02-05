@@ -25,6 +25,8 @@ class Member extends BaseModel
         'name', 
         'title',
         'description',
+        'title_ina',
+        'description_ina',
         'published'
     ];
     

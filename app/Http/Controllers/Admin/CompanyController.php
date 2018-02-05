@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\Banner as Model;
+use App\Model\Company as Model;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Yajra\Datatables\Datatables;
 
-class BannerController extends ResourceController
+class CompanyController extends ResourceController
 {
 
     /**
@@ -16,13 +16,13 @@ class BannerController extends ResourceController
      * @var array
      */
     protected $rules = [
-        'order' => 'integer',
-        'image' => 'required|string',
+        'order' => 'sometimes||integer',
+        'image' => '',
         'name' => 'required|string',
-        'description' => 'sometimes|nullable|string',
-        'name_ina' => 'required|string',
-        'description_ina' => 'sometimes|nullable|string',
-        'published' => ''
+        'description' => '',
+        'description_ina' => '',
+        'link' => '',
+        'published' => '',
     ];
 
     public function __construct(Model $model)
@@ -51,5 +51,5 @@ class BannerController extends ResourceController
     {
         parent::doSave();
     }
-    
+
 }

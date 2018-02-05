@@ -23,16 +23,35 @@
         ) 
     !!}
     {!! Form::backendText('slug', 'Slug') !!}
+    {!! Form::backendSelect('published', 'Published', ['No', 'Yes']) !!}
+    {!! Form::backendText('name', 'Name') !!}
     {{-- {!! Form::backendText('url_prefix', 'URL') !!} --}}
     {{-- {!! Form::backendText('layout', 'Layout') !!} --}}
-    {!! Form::backendText('name', 'Name') !!}
-    {!! Form::backendFileBrowser('image', "Select Image")!!}
-    {!! Form::backendWysiwyg('title', 'Title') !!}
-    {!! Form::backendText('short_title', 'Short Title') !!}
-    {!! Form::backendTextarea('short_description', 'Short Description') !!}
-    {!! Form::backendWysiwyg('description', 'Description') !!}
 
-    {!! Form::backendSelect('published', 'Published', ['No', 'Yes']) !!}
+    <div class="x_content">
+        <div class="" role="tabpanel" data-example-id="togglable-tabs">
+            <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">English Content</a></li>
+                <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Indonesia Content</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">                   
+                    {!! Form::backendFileBrowser('image', "Select Image")!!}
+                    {!! Form::backendWysiwyg('title', 'Title') !!}
+                    {!! Form::backendText('short_title', 'Short Title') !!}
+                    {!! Form::backendTextarea('short_description', 'Short Description') !!}
+                    {!! Form::backendWysiwyg('description', 'Description') !!}
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+                    {!! Form::backendFileBrowser('image_ina', "Select Image")!!}
+                    {!! Form::backendWysiwyg('title_ina', 'Title') !!}
+                    {!! Form::backendText('short_title_ina', 'Short Title') !!}
+                    {!! Form::backendTextarea('short_description_ina', 'Short Description') !!}
+                    {!! Form::backendWysiwyg('description_ina', 'Description') !!}
+                </div>
+            </div>
+        </div>
+    </div>
     
     <div class="form-actions">
         <div class="row">

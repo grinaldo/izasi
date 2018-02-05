@@ -1,13 +1,21 @@
 @extends('layouts.master')
 
 @section('page-title')
+@if(\Session::get('locale') == 'en_US')
 Izasi | About Us
+@else
+Izasi | Tentang Kami
+@endif
 @endsection
 
 @section('content')
-<section class="small-hero" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat center;">
+<section class="small-hero" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat; background-size: auto !important;">
     <div class="general-overlay"></div>
+    @if(\Session::get('locale') == 'en_US')
     <h2>ABOUT IZASI</h2>
+    @else
+    <h2>TENTANG IZASI</h2>
+    @endif
 </section>
 <section class="section">
     <div class="container">
@@ -42,8 +50,10 @@ Izasi | About Us
     <div class="container container--mid-container">
         <div class="row">
             <div class="col s12 m12">
-                @if(!empty($about->description))
-                <p class="justified">{{$about->description}}</p>
+                @if(!empty($about->description) && \Session::get('locale') == 'en_US')
+                <p class="justified">{!! $about->description !!}</p>
+                @elseif(!empty($about->description_ina) && \Session::get('locale') == 'id_ID')
+                <p class="justified">{!! $about->description_ina !!}</p>
                 @endif
             </div>
         </div>
@@ -55,7 +65,7 @@ Izasi | About Us
         <h2>PILLARS OF IZASI</h2>
     </section>
     <section class="section bg-light-grey">
-        <div class="columns strategic-mobile">
+        <div class="columns blocky">
             @if(!empty($strategicImage))
             <img class="centerized" src="{{asset($strategicImage->image)}}" alt="">
             @endif
@@ -65,21 +75,33 @@ Izasi | About Us
 
 <div class="strategic-mobile">
     <div class="columns strategic-desc">
-        <section class="small-hero" style="background:url('{{asset('images/house-top.png')}}') no-repeat center;">
+        <section class="small-hero" style="background:url('{{asset('images/house-top.png')}}') no-repeat center; background-size: 36em 12em !important;">
             <div class="general-overlay"></div>
+            @if(\Session::get('locale') == 'en_US')
             <h2>OUR VISION</h2>
+            @else
+            <h2>VISI KAMI</h2>
+            @endif
         </section>
     </div>
     <div class="section">
         <div class="container">
             @foreach($visions as $vision)
-            <p>{{$vision->description}}</p>
+            @if(\Session::get('locale') == 'en_US')
+            <p>{!! $vision->description !!}</p>
+            @else
+            <p>{!! $vision->description_ina !!}</p>
+            @endif
             @endforeach
         </div>
     </div>
-    <section class="small-hero" style="background:url('{{asset('images/house-bot.png')}}') no-repeat center;">
+    <section class="small-hero" style="background:url('{{asset('images/house-bot.png')}}') no-repeat center; background-size: 36em 12em !important;">
         <div class="general-overlay"></div>
+        @if(\Session::get('locale') == 'en_US')
         <h2>OUR INITIATIVES</h2>
+        @else
+        <h2>INISIATIF KAMI</h2>
+        @endif
     </section>
     <div class="section">
         <div class="container">
@@ -87,23 +109,36 @@ Izasi | About Us
                 @foreach($initiatives as $initiative)
                 <li class="centerized">
                     <img src="{{asset(!empty($initiative->image) ? $initiative->image : 'images/about-icon-education.png')}}" alt="">
+                    @if(\Session::get('locale') == 'en_US')
                     <h4>{{$initiative->name}}</h4>
-                    <p>{{$initiative->description}}</p>
+                    <p>{!! $initiative->description !!}</p>
+                    @else
+                    <h4>{{$initiative->name_ina}}</h4>
+                    <p>{!! $initiative->description_ina !!}</p>
+                    @endif
                 </li>
                 @endforeach
             </ul>
         </div>
     </div>
-    <section class="small-hero" style="background:url('{{asset('images/house-foundation.png')}}') no-repeat center;">
+    <section class="small-hero" style="background:url('{{asset('images/house-foundation.png')}}') no-repeat center; background-size: 36em 12em !important;">
         <div class="general-overlay"></div>
+        @if(\Session::get('locale') == 'en_US')
         <h2>OUR STRATEGIC</h2>
+        @else
+        <h2>STRATEGI KAMI</h2>
+        @endif
     </section>
     <div class="section">
         <div class="container">
             <ul class="">
                 @foreach($missions as $mission)
                 <li class="centerized">
-                    <p>{{$mission->description}}</p>
+                    @if(\Session::get('locale') == 'en_US')
+                    <p>{!!$mission->description!!}</p>
+                    @else
+                    <p>{!!$mission->description_ina!!}</p>
+                    @endif
                     <br>
                     <div class="divider" style=""></div>
                     <br>

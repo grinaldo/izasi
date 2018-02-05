@@ -40,9 +40,11 @@ $factory->define(App\Model\Article::class, function (Faker\Generator $faker) {
     $firstName = $faker->firstName;
     $lastName  = $faker->lastName;
     return [
-        'name'        => 'Article by ' . $firstName . ' ' . $lastName,
-        'image'       => 'images/banner-'.rand(1,9).'.jpg',
-        'writer'      => $firstName . ' ' . $lastName,
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eligendi perferendis ducimus sed aliquid natus enim, beatae velit reiciendis, inventore molestiae, neque sapiente temporibus architecto dicta, vero quaerat sequi quos.'
+        'name'            => 'Article by ' . $firstName . ' ' . $lastName,
+        'name_ina'        => 'Artikel oleh ' . $firstName . ' ' . $lastName,
+        'image'           => 'images/banner-'.rand(1,9).'.jpg',
+        'writer'          => $firstName . ' ' . $lastName,
+        'description'     => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eligendi perferendis ducimus sed aliquid natus enim, beatae velit reiciendis, inventore molestiae, neque sapiente temporibus architecto dicta, vero quaerat sequi quos.',
+        'description_ina' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maxime voluptas voluptatum! Blanditiis minima quaerat maiores veniam fugit magni enim sunt reiciendis dignissimos, eos ab cumque quis eligendi, quidem ut!'
     ];
 });
