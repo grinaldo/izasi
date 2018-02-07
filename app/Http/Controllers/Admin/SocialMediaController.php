@@ -17,7 +17,7 @@ class SocialMediaController extends ResourceController
      */
     protected $rules = [
         'image' => 'sometimes|nullable|string',
-        'name' => 'required|string|unique:categories,name',
+        'name' => 'required|string',
         'url' => 'required|string',
         'description' => 'sometimes|nullable|string',
         'published' => ''

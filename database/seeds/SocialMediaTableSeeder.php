@@ -45,7 +45,7 @@ class SocialMediaTableSeeder extends Seeder
             'name'  => 'instagram',
             'order' => 4,
             'image' => 'images/icon-ig.png',
-            'url'   => 'https://instagram.com/your-url',
+            'url'   => 'https://instagram.com/colorbond.id/',
             'published_at' => Carbon::now()
         ]);
         $model->save();

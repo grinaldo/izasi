@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Session;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,12 +31,18 @@ class AppServiceProvider extends ServiceProvider
     {
         $constants = $this->app['config']->get('constants');
 
-        if ( ! is_null($constants)) {
+        if (!is_null($constants)) {
             foreach ($constants as $key => $value) {
                 if (!defined($key)) {
                     define($key, $value);
                 }
             }
         }
+
+        if (!Session::has('locale'))
+        {
+            Session::put('locale', 'en');
+        }
+        app()->setLocale(Session::get('locale'));
     }
 }

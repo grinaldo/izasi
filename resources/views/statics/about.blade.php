@@ -9,24 +9,6 @@ Izasi | Tentang Kami
 @endsection
 
 @section('content')
-<div class="parallax">
-  <div class="parallax__group">
-    <div class="parallax__layer parallax__layer--back" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat center; background-size: cover;">
-      Back Layer
-    </div>
-    <div class="parallax__layer parallax__layer--base">
-        Title Container
-    </div>
-  </div>
-  <div class="parallax__group">
-    <div class="parallax__layer parallax__layer--back">
-      Back layer 2
-    </div>
-    <div class="parallax__layer parallax__layer--base">
-      Title test 2
-    </div>
-  </div>
-</div>
 <section class="small-hero" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat; background-size: auto !important;">
     <div class="general-overlay"></div>
     @if(\Session::get('locale') == 'en_US')
@@ -35,6 +17,15 @@ Izasi | Tentang Kami
     <h2>TENTANG IZASI</h2>
     @endif
 </section>
+<section data-0="background-position:0px 0px;" data-100000="background-position:0px -50000px;">
+    <div id="skrollr-body">
+        <div id="center">
+            <h1>Parallax background</h1>
+            <p>Demo of background scrolling at constant speed independent of content height.</p>
+            <p><a href="bg_constant_speed_less.html">less content</a> - more content</p>
+            <hr />
+        </div>
+</section>
 <section class="section">
     <div class="container">
         <div class="columns">
@@ -42,7 +33,7 @@ Izasi | Tentang Kami
                 @if(\Session::get('locale') == 'en_US' && !empty($milestoneImage))
                 <img src="{{ asset($milestoneImage->image) }}" alt="milestone-image" width="100%">
                 @elseif(\Session::get('locale') == 'id_ID' && !empty($milestoneImage->image_ina))
-                <img src="{{ asset($milestoneImage->image) }}" alt="milestone-image" width="100%">
+                <img src="{{ asset($milestoneImage->image_ina) }}" alt="milestone-image" width="100%">
                 @endif
             </div>
             <div class="column is-one-thirds">
@@ -86,8 +77,10 @@ Izasi | Tentang Kami
     </section>
     <section class="section bg-light-grey">
         <div class="columns blocky">
-            @if(!empty($strategicImage))
+            @if(!empty($strategicImage) && \Session::get('locale') == 'en_US')
             <img class="centerized" src="{{asset($strategicImage->image)}}" alt="">
+            @else
+            <img class="centerized" src="{{asset($strategicImage->image_ina)}}" alt="">
             @endif
         </div>
     </section>
@@ -172,4 +165,5 @@ Izasi | Tentang Kami
 @endsection
 
 @section('page-script')
+<script type="text/javascript" src="{{asset('js/skrollr.min.js')}}"></script>
 @endsection
