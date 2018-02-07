@@ -18,14 +18,7 @@ class PagesTableSeeder extends Seeder
             'title'             => 'About Us',
             'short_title'       => 'The Zinc - Auluminium Coated Steel Industries in Indonesia',
             'short_description' => '-', 
-            'description'       => 'In 2013, IZASI association was built on the initiative of three coated steel
-                industries. PT. NS Bluescope Indonesia, PT. Sarana Central Bajatama, Tbk, and
-                PT. Sunrise Steel are both as founder and producer of Galvalum-Coated Sheet.
-                The total labor in the country is more than 1,200 people directly and indirectly
-                over 24,000 people. IZASI is producer of coated steel through coating process
-                with zinc and aluminum. It can be applied for basic material constructions in most
-                aspects of life such as railways, oil &amp; gas trans, building, automotive, ship,
-                construction, household, etc.',
+            'description'       => 'In 2013, IZASI association was built on the initiative of three coated steel industries. PT. NS Bluescope Indonesia, PT. Sarana Central Bajatama, Tbk, and PT. Sunrise Steel are both as founder and producer of Galvalum-Coated Sheet. The total labor in the country is more than 1,200 people directly and indirectly over 24,000 people. IZASI is producer of coated steel through coating process with zinc and aluminum. It can be applied for basic material constructions in most aspects of life such as railways, oil &amp; gas trans, building, automotive, ship, construction, household, etc.',
             'title_ina'             => 'Tentang Kami',
             'short_title_ina'       => 'Industri Zinc - Auluminium Coated Steel Indonesia',
             'short_description_ina' => '-', 

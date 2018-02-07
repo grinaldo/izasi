@@ -9,6 +9,24 @@ Izasi | Tentang Kami
 @endsection
 
 @section('content')
+<div class="parallax">
+  <div class="parallax__group">
+    <div class="parallax__layer parallax__layer--back" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat center; background-size: cover;">
+      Back Layer
+    </div>
+    <div class="parallax__layer parallax__layer--base">
+        Title Container
+    </div>
+  </div>
+  <div class="parallax__group">
+    <div class="parallax__layer parallax__layer--back">
+      Back layer 2
+    </div>
+    <div class="parallax__layer parallax__layer--base">
+      Title test 2
+    </div>
+  </div>
+</div>
 <section class="small-hero" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat; background-size: auto !important;">
     <div class="general-overlay"></div>
     @if(\Session::get('locale') == 'en_US')
@@ -21,7 +39,9 @@ Izasi | Tentang Kami
     <div class="container">
         <div class="columns">
             <div class="column is-two-thirds">
-                @if(!empty($milestoneImage))
+                @if(\Session::get('locale') == 'en_US' && !empty($milestoneImage))
+                <img src="{{ asset($milestoneImage->image) }}" alt="milestone-image" width="100%">
+                @elseif(\Session::get('locale') == 'id_ID' && !empty($milestoneImage->image_ina))
                 <img src="{{ asset($milestoneImage->image) }}" alt="milestone-image" width="100%">
                 @endif
             </div>

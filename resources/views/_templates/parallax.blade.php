@@ -19,7 +19,7 @@ Site Name | Home Page
             <br><br>
         </div>
     </div>
-    <div class="parallax"><img src="{{ asset('images/background1.jpg') }}" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="{{ asset('images/banner-1.jpg') }}" alt="Unsplashed background img 1"></div>
 </div>
 <div class="container">
     <div class="section">
@@ -57,7 +57,7 @@ Site Name | Home Page
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="{{ asset('images/background2.jpg') }}" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="{{ asset('images/banner-2.jpg') }}" alt="Unsplashed background img 2"></div>
 </div>
 <div class="container">
     <div class="section">
@@ -78,7 +78,7 @@ Site Name | Home Page
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="{{ asset('images/background3.jpg') }}" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="{{ asset('images/banner-3.jpg') }}" alt="Unsplashed background img 3"></div>
 </div>
 <div id="app"></div>
 @endsection
