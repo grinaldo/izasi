@@ -37,11 +37,11 @@
             <div id="myTabContent" class="tab-content">
                 <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                     {!! Form::backendText('name', 'Name') !!}
-                    {!! Form::backendWysiwyg('description', 'Description') !!}
+                    {!! Form::backendTextarea('description', 'Description') !!}
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
                     {!! Form::backendText('name_ina', 'Name') !!}
-                    {!! Form::backendWysiwyg('description_ina', 'Description') !!}
+                    {!! Form::backendTextarea('description_ina', 'Description') !!}
                 </div>
             </div>
         </div>

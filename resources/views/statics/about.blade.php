@@ -165,5 +165,8 @@ Izasi | Tentang Kami
 @endsection
 
 @section('page-script')
-<script type="text/javascript" src="{{asset('js/skrollr.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+<script>
+$('.parallax-window').parallax();
+</script>
 @endsection

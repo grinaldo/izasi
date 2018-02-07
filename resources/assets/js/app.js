@@ -10,6 +10,7 @@ require('./bootstrap');
 // require('./materialize');
 // require('./init');
 require('./slick');
+require('./skrollr');
 
 window.Vue = require('vue');
 

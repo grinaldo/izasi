@@ -4,6 +4,7 @@
         @include('_includes._head-meta')
         @include('_includes._head-style')
         @include('_includes._head-script')
+        @yield('page-style')
     </head>
     <body>
         <div class="overlay"></div>

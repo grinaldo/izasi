@@ -32,7 +32,7 @@
                 <div class="separator">
                     <div>
                         <h1><i class="fa fa-user"></i> Izasi Admin</h1>
-                        <p>©2017 All Rights Reserved. CMS for Izasi Website</p>
+                        <p>©2018 All Rights Reserved. CMS for Izasi Website</p>
                     </div>
                 </div>
             </form>
