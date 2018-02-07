@@ -22,7 +22,7 @@ class PagesTableSeeder extends Seeder
             'title_ina'             => 'Tentang Kami',
             'short_title_ina'       => 'Industri Zinc - Auluminium Coated Steel Indonesia',
             'short_description_ina' => '-', 
-            'description_ina'       => 'Pada tahun 2013, asosiasi IZASI dibangun atas inisiatif tiga industri baja lapis yaitu PT. NS BlueScope Indonesia, PT. Sarana Central Bajatama, Tbk, dan PT. Sunrise Steel. Keduanya merupakan pendiri dan produsen lembaran baja dilapisi Zinc - Alumunium. Total tenaga kerja dari tiga perusahaan di negara ini kurang-lebih dari 1.200 orang dan yang tidak langsung kurang-lebih dari 24.000 orang. IZASI adalah produsen baja lapis yang melalui proses pelapisan kumparan dingin dengan menggunakan seng dan aluminium. Hal ini dapat diterapkan untuk konstruksi bahan dasar di sebagian besar aspek kehidupan seperti kereta api, trans minyak &amp; gas, bangunan, otomotif, kapal, konstruksi, rumah tangga, dan lainnya.',
+            'description_ina'       => 'Pada tahun 2013, asosiasi IZASI dibangun atas inisiatif tiga industri baja lapis yaitu PT. NS BlueScope Indonesia, PT. Sarana Central Bajatama, Tbk, dan PT. Sunrise Steel. Keduanya merupakan pendiri dan produsen lembaran baja dilapisi galvalume. Total tenaga kerja dari tiga perusahaan di negara ini kurang-lebih dari 1.200 orang dan yang tidak langsung kurang-lebih dari 24.000 orang. IZASI adalah produsen baja lapis yang melalui proses pelapisan kumparan dingin dengan menggunakan seng dan aluminium. Hal ini dapat diterapkan untuk konstruksi bahan dasar di sebagian besar aspek kehidupan seperti kereta api, trans minyak &amp; gas, bangunan, otomotif, kapal, konstruksi, rumah tangga, dan lainnya.',
             'published_at'          => Carbon::now(),
 
         ]);
@@ -60,12 +60,12 @@ class PagesTableSeeder extends Seeder
 
         $model = new Model([
             'name'                  => 'milestone-static', 
-            'image'                 => 'images/milestone.png',
+            'image'                 => 'images/milestone_rev.png',
             'title'                 => 'Company Milestone',
             'short_title'           => '-',
             'short_description'     => '-', 
             'description'           => '-',
-            'image_ina'             => 'images/milestone.png',
+            'image_ina'             => 'images/milestone_rev.png',
             'title_ina'             => 'Milestone Perusahaan',
             'short_title_ina'       => '-',
             'short_description_ina' => '-', 
@@ -81,7 +81,7 @@ class PagesTableSeeder extends Seeder
             'short_title'           => '-',
             'short_description'     => '-', 
             'description'           => '-',
-            'image_ina'             => 'images/pillar-big.png',
+            'image_ina'             => 'images/strategic_ina.png',
             'title_ina'             => 'Gambar Strategic',
             'short_title_ina'       => '-',
             'short_description_ina' => '-', 

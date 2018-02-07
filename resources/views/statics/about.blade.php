@@ -17,7 +17,7 @@ Izasi | Tentang Kami
     <h2>TENTANG IZASI</h2>
     @endif
 </section>
-<section data-0="background-position:0px 0px;" data-100000="background-position:0px -50000px;">
+{{-- <section data-0="background-position:0px 0px;" data-100000="background-position:0px -50000px;">
     <div id="skrollr-body">
         <div id="center">
             <h1>Parallax background</h1>
@@ -25,7 +25,7 @@ Izasi | Tentang Kami
             <p><a href="bg_constant_speed_less.html">less content</a> - more content</p>
             <hr />
         </div>
-</section>
+</section> --}}
 <section class="section">
     <div class="container">
         <div class="columns">
@@ -77,10 +77,10 @@ Izasi | Tentang Kami
     </section>
     <section class="section bg-light-grey">
         <div class="columns blocky">
-            @if(!empty($strategicImage) && \Session::get('locale') == 'en_US')
-            <img class="centerized" src="{{asset($strategicImage->image)}}" alt="">
-            @else
+            @if(!empty($strategicImage->image_ina) && \Session::get('locale') == 'id_ID')
             <img class="centerized" src="{{asset($strategicImage->image_ina)}}" alt="">
+            @else
+            <img class="centerized" src="{{asset($strategicImage->image)}}" alt="">
             @endif
         </div>
     </section>

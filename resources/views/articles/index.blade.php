@@ -50,9 +50,9 @@ Izasi | Berita & Kegiatan
                             <div class="media-content">
                                 <a href="{{route('articles.index').'/'.$article->slug}}">
                                     @if(\Session::get('locale') == 'en_US')
-                                    <p class="title is-5">{{ strtoupper($article->name) }}</p>
+                                    <p class="article-title is-5">{{ strtoupper($article->name) }}</p>
                                     @else
-                                    <p class="title is-5">{{ strtoupper($article->name_ina) }}</p>
+                                    <p class="article-title is-5">{{ strtoupper($article->name_ina) }}</p>
                                     @endif
                                 </a>
                             </div>

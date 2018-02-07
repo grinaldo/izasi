@@ -18,8 +18,8 @@ class BannersTableSeeder extends Seeder
             'order'           => 2,
             'name'            => 'BROUGHT TOGETHER', 
             'description'     => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
-            'name'            => 'MEMPERTEMUKAN', 
-            'description'     => 'Industri Baja Lapis Alumunium Seng di Indonesia',
+            'name_ina'            => 'MEMPERTEMUKAN', 
+            'description_ina'     => 'Industri Baja Lapis Alumunium Seng di Indonesia',
             'published'       => Carbon::now()
         ]);
         $model->save();
@@ -29,8 +29,8 @@ class BannersTableSeeder extends Seeder
             'order'           => 1,
             'name'            => 'BROUGHT TOGETHER', 
             'description'     => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
-            'name_ina'        => 'MENGHADIRKAN', 
-            'description_ina' => 'Industri Zinc - Alumunium Coated Steel Industries di Indonesia',
+            'name_ina'            => 'MEMPERTEMUKAN', 
+            'description_ina'     => 'Industri Baja Lapis Alumunium Seng di Indonesia',
             'published'       => Carbon::now()
         ]);
         $model->save();
@@ -40,8 +40,8 @@ class BannersTableSeeder extends Seeder
             'order'           => 3,
             'name'            => 'BROUGHT TOGETHER', 
             'description'     => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
-            'name_ina'        => 'MENGHADIRKAN', 
-            'description_ina' => 'Industri Zinc - Alumunium Coated Steel Industries di Indonesia',
+            'name_ina'            => 'MEMPERTEMUKAN', 
+            'description_ina'     => 'Industri Baja Lapis Alumunium Seng di Indonesia',
             'published'       => Carbon::now()
         ]);
         $model->save();
@@ -51,8 +51,8 @@ class BannersTableSeeder extends Seeder
             'order'           => 4,
             'name'            => 'BROUGHT TOGETHER', 
             'description'     => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
-            'name_ina'        => 'MENGHADIRKAN', 
-            'description_ina' => 'Industri Zinc - Alumunium Coated Steel Industries di Indonesia',
+            'name_ina'            => 'MEMPERTEMUKAN', 
+            'description_ina'     => 'Industri Baja Lapis Alumunium Seng di Indonesia',
             'published'       => Carbon::now()
         ]);
         $model->save();
@@ -62,8 +62,8 @@ class BannersTableSeeder extends Seeder
             'name'            => 'BROUGHT TOGETHER', 
             'order'           => 5,
             'description'     => 'The Zinc - Alumunium Coated Steel Industries in Indonesia',
-            'name_ina'        => 'MENGHADIRKAN', 
-            'description_ina' => 'Industri Zinc - Alumunium Coated Steel Industries di Indonesia',
+            'name_ina'            => 'MEMPERTEMUKAN', 
+            'description_ina'     => 'Industri Baja Lapis Alumunium Seng di Indonesia',
             'published'       => Carbon::now()
         ]);
         $model->save();
