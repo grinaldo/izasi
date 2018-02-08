@@ -9,12 +9,21 @@ Izasi | Berita & Kegiatan
 @endsection
 
 @section('content')
-<section class="small-hero" style="background:url('{{asset('images/header-articles.jpg')}}') no-repeat center;">
+{{-- <section class="small-hero" style="background:url('{{asset('images/header-articles.jpg')}}') no-repeat center;">
     <div class="general-overlay"></div>
     @if(\Session::get('locale') == 'en_US')
     <h2>NEWS & EVENTS</h2>
     @else
     <h2>BERITA</h2>
+    @endif
+</section> --}}
+<section class="small-hero-rellax">
+    <div class="general-overlay"></div>
+    <img src="{{ asset('images/header-articles.jpg') }}" alt="" data-rellax-speed="2">
+    @if(\Session::get('locale') == 'en_US')
+    <h2 class="rellax-title-dedicate" data-rellax-speed="-10">NEWS & EVENTS</h2>
+    @else
+    <h2 class="rellax-title-dedicate" data-rellax-speed="-10">BERITA</h2>
     @endif
 </section>
 <div class="section">
@@ -86,4 +95,9 @@ Izasi | Berita & Kegiatan
 @endsection
 
 @section('page-script')
+<script src="{{asset('js/rellax.min.js')}}"></script>
+<script>
+var rellax = new Rellax('.small-hero-rellax img');
+var rellax = new Rellax('.rellax-title-dedicate');
+</script>
 @endsection

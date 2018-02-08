@@ -9,31 +9,23 @@ Izasi | Tentang Kami
 @endsection
 
 @section('content')
-<section class="small-hero" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat; background-size: auto !important;" data-rellax-speed="2">
+{{-- <section class="small-hero" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat; background-size: auto !important;">
     <div class="general-overlay"></div>
     @if(\Session::get('locale') == 'en_US')
     <h2 class="rellax-title-dedicate" data-rellax-speed="-10">ABOUT IZASI</h2>
     @else
     <h2 class="rellax-title-dedicate" data-rellax-speed="-10">TENTANG IZASI</h2>
     @endif
+</section> --}}
+<section class="small-hero-rellax">
+    <div class="general-overlay"></div>
+    <img src="{{ asset('images/header-about.jpg') }}" alt="" data-rellax-speed="2">
+    @if(\Session::get('locale') == 'en_US')
+    <h2 class="rellax-title-dedicate" data-rellax-speed="-10">ABOUT IZASI</h2>
+    @else
+    <h2 class="rellax-title-dedicate" data-rellax-speed="-10">TENTANG IZASI</h2>
+    @endif
 </section>
-{{-- <section class="rellax" style="position: relative">
-    <div class="rellax-image">
-        <img src="{{asset('images/header-about.jpg')}}" alt="">
-    </div>
-    <div class="rellax-title" style="position:absolute; left:50%; top: 50%; transform:translateX(-50%) translateY(-50%); font-family: montserrat-bold; font-size: 5em;">
-        <h2>GG WP</h2>
-    </div>
-</section> --}}
-{{-- <section data-0="background-position:0px 0px;" data-100000="background-position:0px -50000px;">
-    <div id="skrollr-body">
-        <div id="center">
-            <h1>Parallax background</h1>
-            <p>Demo of background scrolling at constant speed independent of content height.</p>
-            <p><a href="bg_constant_speed_less.html">less content</a> - more content</p>
-            <hr />
-        </div>
-</section> --}}
 <section class="section">
     <div class="container">
         <div class="columns">
@@ -175,7 +167,7 @@ Izasi | Tentang Kami
 @section('page-script')
 <script src="{{asset('js/rellax.min.js')}}"></script>
 <script>
-var rellax = new Rellax('.small-hero');
+var rellax = new Rellax('.small-hero-rellax img');
 var rellax = new Rellax('.rellax-title-dedicate');
 </script>
 @endsection
