@@ -9,14 +9,22 @@ Izasi | Tentang Kami
 @endsection
 
 @section('content')
-<section class="small-hero" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat; background-size: auto !important;">
+<section class="small-hero" style="background:url('{{asset('images/header-about.jpg')}}') no-repeat; background-size: auto !important;" data-rellax-speed="2">
     <div class="general-overlay"></div>
     @if(\Session::get('locale') == 'en_US')
-    <h2>ABOUT IZASI</h2>
+    <h2 class="rellax-title-dedicate" data-rellax-speed="-10">ABOUT IZASI</h2>
     @else
-    <h2>TENTANG IZASI</h2>
+    <h2 class="rellax-title-dedicate" data-rellax-speed="-10">TENTANG IZASI</h2>
     @endif
 </section>
+{{-- <section class="rellax" style="position: relative">
+    <div class="rellax-image">
+        <img src="{{asset('images/header-about.jpg')}}" alt="">
+    </div>
+    <div class="rellax-title" style="position:absolute; left:50%; top: 50%; transform:translateX(-50%) translateY(-50%); font-family: montserrat-bold; font-size: 5em;">
+        <h2>GG WP</h2>
+    </div>
+</section> --}}
 {{-- <section data-0="background-position:0px 0px;" data-100000="background-position:0px -50000px;">
     <div id="skrollr-body">
         <div id="center">
@@ -165,8 +173,9 @@ Izasi | Tentang Kami
 @endsection
 
 @section('page-script')
-<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+<script src="{{asset('js/rellax.min.js')}}"></script>
 <script>
-$('.parallax-window').parallax();
+var rellax = new Rellax('.small-hero');
+var rellax = new Rellax('.rellax-title-dedicate');
 </script>
 @endsection

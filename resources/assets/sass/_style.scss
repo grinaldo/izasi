@@ -81,6 +81,47 @@ footer.page-footer {
     cursor: pointer;
 }
 
+// Rellax
+// ===========================
+.rellax {
+    position: relative; 
+    height: 30vh; 
+    overflow: hidden;
+    .rellax-image {
+        height:40vh;
+    }
+    .rellax-title {
+        @media all and (min-width: 36em) {
+            font-size: 3em;
+        }
+        width: 80%;
+        font-size: 1.5em;
+        position: absolute;
+        color: white;
+        font-family: montserrat-bold !important;
+        text-align: center;
+        left: 0;
+        top: -50%;
+        transform: translateX(-50%);
+        letter-spacing: .15em;   
+        width: 100%;
+    }
+    .rellax-general-overlay {
+        height: 40vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:rgba(0,0,0,0.5)
+    }
+}
+
+.rellax-title-dedicate {
+    left: 0 !important;
+    width: 100% !important;
+}
+
 // Home
 // ===========================
 
@@ -116,7 +157,7 @@ footer.page-footer {
 .home_hero__slider-overlay {
     width: 100%;
     height: 100%;
-    background:rgba(0,0,0,0.5)
+    background:rgba(0,0,0,0.5);
 }
 .home_hero__slider-text {
     position: absolute;

@@ -11400,6 +11400,7 @@ $(document).ready(function () {
     // Init Height Pad
     var headerHeight = $('.site-header').outerHeight();
     $('.site-content').css('padding-top', headerHeight + 'px');
+    $('.pdtp').css('margin-top', headerHeight - 20 + 'px');
     // initMap();
 });
 
