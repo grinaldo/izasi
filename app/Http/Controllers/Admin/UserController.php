@@ -23,14 +23,7 @@ class UserController extends ResourceController
         'name' => 'required|string',
         'password' => 'sometimes|nullable|basic_password|confirmed',
         'password_confirmation' => 'sometimes|nullable|string',
-        'gender' => 'sometimes|nullable|string',
         'phone' => 'sometimes|nullable|string',
-        'birthday' => 'sometimes|nullable|string',
-        'province' => 'sometimes|nullable|string',
-        'city' => 'sometimes|nullable|string',
-        'district' => 'sometimes|nullable|string',
-        'zipcode' => 'sometimes|nullable|string',
-        'address' => 'sometimes|nullable|string',
     ];
 
     public function __construct(Model $model)

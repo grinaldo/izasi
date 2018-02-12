@@ -24,23 +24,12 @@
     !!}
     {!! Form::backendSelect('role', 'Role', $roles) !!}
     {!! Form::backendText('name', 'Name') !!}
-    {!! Form::backendText('wallet', 'Wallet') !!}
     {!! Form::backendText('username', 'Username') !!}
     {!! Form::backendEmail('email', 'Email') !!}
+    {!! Form::backendText('phone', 'Phone') !!}
     {!! Form::backendPassword('password', 'Password') !!}
     {!! Form::backendPassword('password_confirmation', 'Password Confirmation') !!}
 
-    {!! Form::backendDate('birthday', 'Birthday') !!}
-    {!! Form::backendSelect('gender', 'Gender', ['male' => 'Male', 'female' => 'Female']) !!}
-    {!! Form::backendText('phone', 'Phone') !!}
-    {!! Form::backendText('province', 'Province') !!}
-    {!! Form::backendText('city', 'City') !!}
-    {!! Form::backendText('district', 'District') !!}
-    {!! Form::backendText('zipcode', 'Zipcode') !!}
-    {!! Form::backendTextarea('address', 'Address Details') !!}
-
-    {!! Form::backendNumber('order', 'Order') !!}
-    {!! Form::backendFileBrowser('image', "Select Image")!!}
     {!! Form::backendSelect('published', 'Published', ['No', 'Yes']) !!}
     
     <div class="form-actions">
