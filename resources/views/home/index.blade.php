@@ -10,6 +10,12 @@ Izasi | Indonesia Zinc-Alumunium Steel Industries
         <img src="{{asset('images/logo.png')}}" alt="izasi-logo" class="home_logo__image">
     </a>
 </div>
+
+<div class="home-lang-placeholder">
+    <a href="?lang=id"><img width="20" src="{{asset('images/flag-id.png')}}" alt=""></a>
+    <a href="?lang=en"><img width="20" src="{{asset('images/flag-en.png')}}" alt=""></a>
+</div>
+
 <section class="home_hero__slider" style="height: 100vh !important; width:100vw !important;">
     @foreach($banners as $banner)
     <div style="background:url('{{asset($banner->image)}}') no-repeat center; height: 100vh !important; width:100% !important; background-size:cover !important; position: relative;">
