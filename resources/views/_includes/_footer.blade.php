@@ -1,4 +1,11 @@
 <footer class="site-footer">
+    <div class="company-contacts">
+        <ul>
+            <li><img src="{{asset('images/icon-mail.png')}}" alt="">{{ $companyEmail->short_description }}</li>
+            <li><img src="{{asset('images/icon-phone.png')}}" alt="">{{ $companyPhone->short_description }}</li>
+            <li><img src="{{asset('images/icon-fax.png')}}" alt="">{{ $companyFax->short_description }}</li>
+        </ul>
+    </div>
     <div class="address">
         {!! $companyAddress->description !!}
     </div>

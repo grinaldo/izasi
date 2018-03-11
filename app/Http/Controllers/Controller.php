@@ -30,9 +30,24 @@ class Controller extends BaseController
             return Page::where('name', '=', 'address-static')->first();
         });
 
+        $companyEmail    = \Cache::remember('company-email', $this->cacheMedium, function () {
+            return Page::where('name', '=', 'corp-email-static')->first();
+        });
+
+        $companyPhone    = \Cache::remember('company-phone', $this->cacheMedium, function () {
+            return Page::where('name', '=', 'corp-phone-static')->first();
+        });
+
+        $companyFax      = \Cache::remember('company-fax', $this->cacheMedium, function () {
+            return Page::where('name', '=', 'corp-fax-static')->first();
+        });
+
         \View::share([
             'socialMedia'    => $socialMedia,
-            'companyAddress' => $companyAddress
+            'companyAddress' => $companyAddress,
+            'companyEmail'   => $companyEmail,
+            'companyPhone'   => $companyPhone,
+            'companyFax'     => $companyFax,
         ]);
     }
 

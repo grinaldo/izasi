@@ -18,7 +18,7 @@ class PagesTableSeeder extends Seeder
             'title'             => 'About Us',
             'short_title'       => 'The Zinc - Auluminium Coated Steel Industries in Indonesia',
             'short_description' => '-', 
-            'description'       => 'In 2013, IZASI association was built on the initiative of three coated steel industries. PT. NS Bluescope Indonesia, PT. Sarana Central Bajatama, Tbk, and PT. Sunrise Steel are both as founder and producer of Galvalum-Coated Sheet. The total labor in the country is more than 1,200 people directly and indirectly over 24,000 people. IZASI is producer of coated steel through coating process with zinc and aluminum. It can be applied for basic material constructions in most aspects of life such as railways, oil &amp; gas trans, building, automotive, ship, construction, household, etc.',
+            'description'       => 'Indonesia Zinc-Alumunium Steel Industries (IZASI) is an association established by three coated steel industries in Indonesia, PT. NS Bluescope Indonesia, PT. Saranacentral Bajatama, Tbk, and PT. Sunrise Steel as founders and producers of Aluminium-Zinc Coated Steel Sheet in 2013. The members holds more than 1,200 people directly and indirectly over 24,000 people. The Aluminium-Zinc Coated Steel Sheet can be applied for basic material constructions such as building, construction, household, shipbuilding, automotive, other transportation modes, and etc.',
             'title_ina'             => 'Tentang Kami',
             'short_title_ina'       => 'Industri Zinc - Auluminium Coated Steel Indonesia',
             'short_description_ina' => '-', 
@@ -60,12 +60,12 @@ class PagesTableSeeder extends Seeder
 
         $model = new Model([
             'name'                  => 'milestone-static', 
-            'image'                 => 'images/milestone_rev.png',
+            'image'                 => 'images/milestone_revised.png',
             'title'                 => 'Company Milestone',
             'short_title'           => '-',
             'short_description'     => '-', 
             'description'           => '-',
-            'image_ina'             => 'images/milestone_rev.png',
+            'image_ina'             => 'images/milestone_revised.png',
             'title_ina'             => 'Milestone Perusahaan',
             'short_title_ina'       => '-',
             'short_description_ina' => '-', 
@@ -76,12 +76,12 @@ class PagesTableSeeder extends Seeder
 
         $model = new Model([
             'name'                  => 'strategic-static', 
-            'image'                 => 'images/pillar-big.png',
+            'image'                 => 'images/pilar_inggris_1.png',
             'title'                 => 'Strategic Image',
             'short_title'           => '-',
             'short_description'     => '-', 
             'description'           => '-',
-            'image_ina'             => 'images/strategic_ina.png',
+            'image_ina'             => 'images/pilar_indonesia_1.png',
             'title_ina'             => 'Gambar Strategic',
             'short_title_ina'       => '-',
             'short_description_ina' => '-', 
@@ -102,6 +102,54 @@ class PagesTableSeeder extends Seeder
             'short_title_ina'       => '-',
             'short_description_ina' => '-6.217279,106.813875', 
             'description_ina'       => '-6.217279,106.813875',
+            'published_at'          => Carbon::now(),
+        ]);
+        $model->save();
+
+        $model = new Model([
+            'name'                  => 'corp-email-static', 
+            'image'                 => '',
+            'title'                 => 'Corporate Email',
+            'short_title'           => 'Corporate Email',
+            'short_description'     => 'secretariat@izasi.org', 
+            'description'           => 'secretariat@izasi.org',
+            'image_ina'             => '',
+            'title_ina'             => 'Email Perusahaan',
+            'short_title_ina'       => 'Email Perusahaan',
+            'short_description_ina' => 'secretariat@izasi.org', 
+            'description_ina'       => 'secretariat@izasi.org',
+            'published_at'          => Carbon::now(),
+        ]);
+        $model->save();
+
+        $model = new Model([
+            'name'                  => 'corp-phone-static', 
+            'image'                 => '',
+            'title'                 => 'Corporate Phone',
+            'short_title'           => 'Corporate Phone',
+            'short_description'     => '+62 21 578 54 150', 
+            'description'           => '+62 21 578 54 150',
+            'image_ina'             => '',
+            'title_ina'             => 'Telpon Perusahaan',
+            'short_title_ina'       => 'Telpon Perusahaan',
+            'short_description_ina' => '+62 21 578 54 150', 
+            'description_ina'       => '+62 21 578 54 150',
+            'published_at'          => Carbon::now(),
+        ]);
+        $model->save();
+
+        $model = new Model([
+            'name'                  => 'corp-fax-static', 
+            'image'                 => '',
+            'title'                 => 'Corporate Fax',
+            'short_title'           => 'Corporate Fax',
+            'short_description'     => '+62 21 578 5 145', 
+            'description'           => '+62 21 578 5 145',
+            'image_ina'             => '',
+            'title_ina'             => 'Fax Perusahaan',
+            'short_title_ina'       => 'Fax Perusahaan',
+            'short_description_ina' => '+62 21 578 5 145', 
+            'description_ina'       => '+62 21 578 5 145',
             'published_at'          => Carbon::now(),
         ]);
         $model->save();

@@ -13,6 +13,28 @@
         font-size: 1em;
     }
     font-size: .5em;
+    .company-contacts {
+        ul {
+            display: inline-block;
+            li {
+                display: inline-block;
+                @media all and (min-width: 36em) {
+                    width: auto !important;
+                }
+                width: 100% !important;
+                margin: .5em;
+                img {
+                    @media all and (min-width: 36em) {
+                        margin-right: .5em;
+                        margin-left: 1em;
+                        margin-bottom: -.5em;
+                    }
+                    margin: 0 .5em -.5em 0;
+                    width: 2em !important;
+                }
+            }
+        }
+    }
     ul {
         display: inline-block;
         li {

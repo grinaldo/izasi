@@ -12,8 +12,6 @@ use App\Model\Initiative;
 
 class StaticController extends Controller
 {
-    
-    
     public function aboutIndex()
     {
         $about = \Cache::remember('abouts', $this->cacheLong, function () {
