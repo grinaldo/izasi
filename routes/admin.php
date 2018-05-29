@@ -74,11 +74,6 @@ Route::group(['as' => 'backend.'], function() {
         'uses' => 'MissionController@anyData'
     ]);
     Route::resource('missions', 'MissionController');
-    // Members
-    Route::get('mmembers/anydata', [
-        'as' => 'mmembers.data',
-        'uses' => 'MemberController@anyData'
-    ]);
     // Contacts
     Route::get('contacts/anydata', [
         'as' => 'contacts.data',
