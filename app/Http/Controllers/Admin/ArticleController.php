@@ -17,9 +17,12 @@ class ArticleController extends ResourceController
      */
     protected $rules = [
         'order' => 'sometimes|nullable|integer',
+        'writer'  => 'required|string',
         'image' => 'sometimes|nullable|string',
-        'name' => 'required|string',
+        'name'  => 'required|string',
+        'name_ina' => 'required|string',
         'description' => '',
+        'description_ina' => '',
         'published' => '',
     ];
 
