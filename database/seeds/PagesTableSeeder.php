@@ -153,5 +153,56 @@ class PagesTableSeeder extends Seeder
             'published_at'          => Carbon::now(),
         ]);
         $model->save();
+
+        $model = new Model([
+            'name'                  => 'google-analytic', 
+            'image'                 => '',
+            'title'                 => 'Google Analytic',
+            'short_title'           => 'Google Analytic',
+            'short_description'     => 'Google Analytic', 
+            'description'           => '
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120628680-1"></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag(\'js\', new Date());
+
+                  gtag(\'config\', \'UA-120628680-1\');
+                </script>',
+            'image_ina'             => '',
+            'title_ina'             => 'Google Analyic',
+            'short_title_ina'       => 'Google Analyic',
+            'short_description_ina' => 'Google Analytic', 
+            'description_ina'       => '
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120628680-1"></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag(\'js\', new Date());
+
+                  gtag(\'config\', \'UA-120628680-1\');
+                </script>',
+            'published_at'          => Carbon::now(),
+        ]);
+        $model->save();
+
+        $model = new Model([
+                'name'                  => 'google-tag-manager-id', 
+                'image'                 => '',
+                'title'                 => 'Google Tag Manager ID',
+                'short_title'           => 'Google Tag Manager ID',
+                'short_description'     => 'Google Tag Manager ID', 
+                'description'           => 'GTM-W65CZW8',
+                'image_ina'             => '',
+                'title_ina'             => 'Google Tag Manager ID',
+                'short_title_ina'       => 'Google Tag Manager ID',
+                'short_description_ina' => 'Google Tag Manager ID', 
+                'description_ina'       => 'GTM-W65CZW8',
+                'published_at'          => Carbon::now(),
+            ]);
+        $model->save();
     }
+
 }

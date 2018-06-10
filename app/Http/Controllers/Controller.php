@@ -23,23 +23,31 @@ class Controller extends BaseController
         $this->cacheShort  = env('CACHE_BUFFER_SHORT', 1);
         $this->cacheMedium = env('CACHE_BUFFER_MEDIUM', 15);
         $this->cacheLong   = env('CACHE_BUFFER_LONG', 60);
-        $socialMedia     = \Cache::remember('socmed', $this->cacheMedium, function () {
+        $socialMedia       = \Cache::remember('socmed', $this->cacheMedium, function () {
             return SocialMedia::asc()->published()->get();
         });
-        $companyAddress  = \Cache::remember('company-address', $this->cacheMedium, function () {
+        $companyAddress = \Cache::remember('company-address', $this->cacheMedium, function () {
             return Page::where('name', '=', 'address-static')->first();
         });
 
-        $companyEmail    = \Cache::remember('company-email', $this->cacheMedium, function () {
+        $companyEmail = \Cache::remember('company-email', $this->cacheMedium, function () {
             return Page::where('name', '=', 'corp-email-static')->first();
         });
 
-        $companyPhone    = \Cache::remember('company-phone', $this->cacheMedium, function () {
+        $companyPhone = \Cache::remember('company-phone', $this->cacheMedium, function () {
             return Page::where('name', '=', 'corp-phone-static')->first();
         });
 
-        $companyFax      = \Cache::remember('company-fax', $this->cacheMedium, function () {
+        $companyFax = \Cache::remember('company-fax', $this->cacheMedium, function () {
             return Page::where('name', '=', 'corp-fax-static')->first();
+        });
+
+        $ga = \Cache::remember('google-analytic', $this->cacheMedium, function () {
+            return Page::where('name', '=', 'google-analytic-static')->first();
+        });
+
+        $gtmId = \Cache::remember('google-gtm', $this->cacheMedium, function () {
+            return Page::where('name', '=', 'google-gtm-static')->first();
         });
 
         \View::share([
@@ -48,6 +56,8 @@ class Controller extends BaseController
             'companyEmail'   => $companyEmail,
             'companyPhone'   => $companyPhone,
             'companyFax'     => $companyFax,
+            'googleAnalytic' => $ga,
+            'googleGtm'      => $gtmId,
         ]);
     }
 
