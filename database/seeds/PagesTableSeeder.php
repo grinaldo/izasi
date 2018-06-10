@@ -1,4 +1,4 @@
-<?php
+e<?php
 
 use Illuminate\Database\Seeder;
 use App\Model\Page as Model;
@@ -155,7 +155,7 @@ class PagesTableSeeder extends Seeder
         $model->save();
 
         $model = new Model([
-            'name'                  => 'google-analytic', 
+            'name'                  => 'google-analytic-static', 
             'image'                 => '',
             'title'                 => 'Google Analytic',
             'short_title'           => 'Google Analytic',
@@ -189,7 +189,7 @@ class PagesTableSeeder extends Seeder
         $model->save();
 
         $model = new Model([
-                'name'                  => 'google-tag-manager-id', 
+                'name'                  => 'google-gtm-static', 
                 'image'                 => '',
                 'title'                 => 'Google Tag Manager ID',
                 'short_title'           => 'Google Tag Manager ID',

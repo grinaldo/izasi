@@ -48,7 +48,7 @@ class AdminCommand extends Command
         $admin->username = $username;
         $admin->email = $email;
         $admin->name = 'Super Admin';
-        $admin->password = \Hash::make($password);
+        $admin->password = $password;
         $admin->active = true;
         $admin->role = $admin::ROLE_SUPER_ADMIN;
 
