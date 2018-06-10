@@ -157,33 +157,16 @@ class PagesTableSeeder extends Seeder
         $model = new Model([
             'name'                  => 'google-analytic-static', 
             'image'                 => '',
-            'title'                 => 'Google Analytic',
-            'short_title'           => 'Google Analytic',
-            'short_description'     => 'Google Analytic', 
-            'description'           => '
-                <!-- Global site tag (gtag.js) - Google Analytics -->
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120628680-1"></script>
-                <script>
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag(\'js\', new Date());
-
-                  gtag(\'config\', \'UA-120628680-1\');
+            'title'                 => 'Google Analytic Tracking ID',
+            'short_title'           => 'Google Analytic Tracking ID',
+            'short_description'     => 'Google Analytic Tracking ID', 
+            'description'           => 'UA-120628680-1;
                 </script>',
             'image_ina'             => '',
-            'title_ina'             => 'Google Analyic',
-            'short_title_ina'       => 'Google Analyic',
-            'short_description_ina' => 'Google Analytic', 
-            'description_ina'       => '
-                <!-- Global site tag (gtag.js) - Google Analytics -->
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120628680-1"></script>
-                <script>
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag(\'js\', new Date());
-
-                  gtag(\'config\', \'UA-120628680-1\');
-                </script>',
+            'title_ina'             => 'Google Analyic Tracking ID',
+            'short_title_ina'       => 'Google Analyic Tracking ID',
+            'short_description_ina' => 'Google Analytic Tracking ID', 
+            'description_ina'       => 'UA-120628680-1',
             'published_at'          => Carbon::now(),
         ]);
         $model->save();
